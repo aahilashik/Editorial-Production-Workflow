@@ -15,6 +15,7 @@ config = {
 }
 
 UPLOAD_LOCATION = "./upload/"
+DOWNLOAD_LOCATION = "./download/"
 ALLOWED_FORMATS = ["csv", "docx", "xml"]
 CLOUD_LOCATION  = "files/"
 
@@ -24,6 +25,18 @@ database    = firebase.database()
 
 # Create your views here.
 
+def deleteUpNDownloads():
+    print("\rDeleting Uploaded Files", end="")
+    for file in os.listdir(UPLOAD_LOCATION):
+        os.unlink(os.path.join(UPLOAD_LOCATION, file))
+    print("\r Deleted Uploaded Files")
+    
+    print("\rDeleting Downloaded Files", end="")
+    for file in os.listdir(DOWNLOAD_LOCATION):
+        os.unlink(os.path.join(DOWNLOAD_LOCATION, file))
+    print("\r Deleted Downloaded Files")
+    
+    
 def index(request):       
     logs = []
     unique_id = "unique_id"
@@ -31,9 +44,11 @@ def index(request):
     if (request.method == 'POST'):
         if request.POST.get("button") == "SUBMIT":
             
+            deleteUpNDownloads()
+            
             mail        = request.POST['mail_id']
-            aTitle       = request.POST['article_title']
-            aType        = request.POST['article_type']
+            aTitle      = request.POST['article_title']
+            aType       = request.POST['article_type']
             head        = request.POST['running_head']
             author      = request.POST['authors']
             figures     = request.POST['no_of_figures']
