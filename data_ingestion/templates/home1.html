@@ -14,6 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 </head>
 
@@ -52,13 +54,39 @@ h1 {
 </style>
 
 
+<script>
+	$(document).ready(function() {
+		var max_fields      = 10;
+		var wrapper         = $(".input_fields_wrap"); 
+		var add_button      = $(".add_field_button");
+		var x = 1;
+	
+		$(add_button).click(function(e){ //on add input button click
+			e.preventDefault();
+				$(wrapper).append('<div class="row" style="width:100%"><label style="width:30%;margin-top:1%;margin-left:15%">      </label><input class="form-control col-sm-4" style="margin-top:1%; margin-right:2%"  type="text" name="mytext[]"/><button class="btn btn-dark ml-1 col-sm-1 remove_field" style="margin-top:1%;" href="#" >Remove</button></div>');
+				x++; 
+			}
+			if(x < max_fields){ //max input box allowed
+		});
+   
+		$(wrapper).on("click",".remove_field", function(e){
+		   	e.preventDefault(); 
+			$(this).parent('div').remove(); 
+			x--;
+		})
+	});
+	
+</script>
+
 <body>
+
 	<div class="loader" id="img" style="display:none;"></div>
 	
 	<br>
 	
 	<div class="container specific" style="font-family:candara; font-weight:bold; color:#1f4068;">
 	
+	 
 		<br>
 
 		<div class="container display">
@@ -76,6 +104,9 @@ h1 {
 					{% csrf_token %}
 					<textarea class="form-control" rows="3" readonly style="width:90%;resize:none;margin-left:4%;">{{logs}}</textarea>
 					<br>
+					&emsp;&emsp;&emsp;Manuscript
+					<input class="btn btn-dark mt-1 ml-5" type="file" name="files" multiple autocomplete="off" required>
+					&emsp;&emsp;&emsp;Figures
 					<input class="btn btn-dark mt-1 ml-5" type="file" name="files" multiple autocomplete="off" required>
 					<!-- <input type="submit" name="button" class="btn btn-dark mt-1 ml-3" onclick="$('#img').show();" value="UPLOAD">	 -->
 				<br><br>
@@ -86,7 +117,7 @@ h1 {
 			<div class=" display">
 				<br>
 					{% csrf_token %}
-					<div class="form-group row" style="font-size: 20px;justify-content: center;">			
+					<div class="form-group row" style="font-size: 20px;">			
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">EMAIL ID</label>
 						<input class="form-control col-sm-4" style="margin-top:1%;margin-right:20%" type="text" name="mail_id" required>
@@ -101,7 +132,14 @@ h1 {
 						<input class="form-control col-sm-4" style="margin-top:1%;margin-right:20%" type="text" name="running_head" required>
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">AUTHOR(s)</label>
-						<input class="form-control col-sm-4" style="margin-top:1%;margin-right:20%" type="text" name="authors" required>
+						<input class="form-control col-sm-4" style="margin-top:1%;" type="text" name="authors" required>
+						
+						
+						<button class="btn btn-dark ml-1 col-sm-1 add_field_button" style="margin-top:1%;">ADD</button>
+						<div class="input_fields_wrap row " style="width:100%" ></div>
+						
+						
+						
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">NUMBER OF FIGURES</label>
 						<input class="form-control col-sm-4" style="margin-top:1%;margin-right:20%" type="text" name="no_of_figures" required>
@@ -112,7 +150,7 @@ h1 {
 						<label style="width:30%;margin-top:1%;margin-left:15%">SPECIAL INSTRUCTIONS</label>
 						<input class="form-control col-sm-4" style="margin-top:1%;margin-right:20%" type="text" name="spl_instruct" required>
 						
-						<input type="submit" style="" name="button"  class="btn btn-dark mt-2 mb-2" value="SUBMIT">
+						<input type="submit" style="" name="button" onclick="$('#img').show();" class="btn btn-dark mt-2 mb-2" value="SUBMIT">
 
 					</div>
 				<br>
