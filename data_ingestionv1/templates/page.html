@@ -20,7 +20,7 @@
 		var maxField = 5;
 		var addButton = $('.add_button'); 
 		var wrapper = $('.field_wrapper');
-		var fieldHTML = '<div class="row" ><label style="width:30%;margin-top:1%;margin-left:15%"> </label><input class="form-control col-sm-5" style="margin-top:1%;margin-right:1%" type="text" name="authors" required><a style="margin-top:1%;margin-right:8%;color:#ff2277;" href="javascript:void(0);" class="remove_button">REM</a></div>';
+		var fieldHTML = '<div class="row" ><label style="width:30%;margin-top:1%;margin-left:15%"></label><input class="form-control col-sm-5" style="margin-top:1%;margin-right:1%" type="text" name="authors" required><a style="width:3%;margin-top:1%;margin-right:8%;color:#ff2277;" href="javascript:void(0);" class="remove_button">x</a></div>';
 		var x = 1;
 
 		$(addButton).click(function(){
@@ -133,6 +133,9 @@ h1 {
 						<label style="width:30%;margin-top:1%;margin-left:15%">EMAIL ID</label>
 						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="mail_id" value="{{Mail_ID}}" required>
 						
+						<label style="width:30%;margin-top:1%;margin-left:15%">DOI</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="doi" value="{{DOI}}" required>
+						
 						<label style="width:30%;margin-top:1%;margin-left:15%">ARTICLE TITLE</label>
 						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="article_title" value="{{Article_Title}}" required>
 						
@@ -144,13 +147,13 @@ h1 {
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">AUTHOR(s)</label>
 						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:1%" type="text" name="authors" value="{{Authors.0}}" required>
-						<a href="javascript:void(0);" class="add_button" style="margin-top:1%;margin-right:8%" title="Add field">ADD</a>
+						<a href="javascript:void(0);" class="add_button" style="width:3%;margin-top:1%;margin-right:8%" title="Add field">+</a>
 						<div class="field_wrapper" style="width:100%;">
 							{% for author in Authors|slice:"1:" %}
 								<div class="row" >
 									<label style="width:30%;margin-top:1%;margin-left:15%" > </label>
 									<input class="form-control col-sm-5" style="margin-top:1%;margin-right:1%" type="text" name="authors" value="{{author}}" required>
-									<a style="margin-top:1%;margin-right:8%;color:#ff2277;" href="javascript:void(0);" class="remove_button">REM</a>
+									<a style="margin-top:1%;margin-right:8%;color:#ff2277;" href="javascript:void(0);" class="remove_button">x</a>
 								</div>
 							{% endfor %}
 						</div>
@@ -166,6 +169,18 @@ h1 {
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">SPECIAL INSTRUCTIONS</label>
 						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="spl_instruct" value="{{Special_Instructions}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">CONFLICT OF INTEREST</label>
+						<div class="col-sm-5" style="margin-top:1%;margin-right:12%;">
+							<input style="margin-top:1%" type="radio" name="c_Interest" value="Present" {% if Conflict_of_Interest %}checked{% endif %}><label  style="margin-left:2%"for="Present" >Present</label>
+							<input style="margin-top:1%;margin-left:5%" type="radio" name="c_Interest" value="Absent" {% if not Conflict_of_Interest %}checked{% endif %}><label style="margin-left:2%" for="Absent" >Absent</label>
+						</div>
+
+						<label style="width:30%;margin-top:1%;margin-left:15%">FUNDING DETAILS</label>
+						<div class="col-sm-5" style="margin-top:1%;margin-right:12%;">
+							<input style="margin-top:1%" type="radio" name="funding" value="Present" {% if Funding %}checked{% endif %}><label style="margin-left:2%" for="Present" >Present</label>
+							<input style="margin-top:1%;margin-left:5%" type="radio" name="funding" value="Absent"  {% if not Funding %}checked{% endif %}> <label style="margin-left:2%" for="Absent">Absent </label>
+						</div>
 						
 						<input type="submit" style="" name="button"  class="btn btn-dark mt-2 mb-2"  onsubmit="$('#img').show();" value="SUBMIT" {{disable}}>
 

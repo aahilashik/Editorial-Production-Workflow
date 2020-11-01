@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /home/lopez/grobid/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Eliminating errors: How The Ohio State University is striving for processing perfection with a quality control programme</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Kristen</forename><surname>Regan</surname></persName>
+							<email>regan.78@osu.edu</email>
+						</author>
+						<author>
+							<persName><forename type="first">Tracy</forename><surname>Owens</surname></persName>
+						</author>
+						<author>
+							<affiliation key="aff0">
+								<note type="raw_affiliation">The Ohio State University Foundation Advancement Records, USA</note>
+								<orgName type="institution">The Ohio State University Foundation Advancement Records</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff1">
+								<note type="raw_affiliation">018B, 1480 W Lane Ave, Columbus, OH 43221, USA</note>
+								<orgName type="institution">018B</orgName>
+								<address>
+									<addrLine>1480 W Lane Ave</addrLine>
+									<postCode>43221</postCode>
+									<settlement>Columbus</settlement>
+									<region>OH</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff2">
+								<note type="raw_affiliation"><label>3</label> Point Consulting Ltd, USA</note>
+								<orgName type="institution">Point Consulting Ltd</orgName>
+								<address>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<affiliation key="aff3">
+								<note type="raw_affiliation">6008 Trafalgar Ln, Dublin, OH 43016, USA</note>
+								<address>
+									<addrLine>6008 Trafalgar Ln</addrLine>
+									<postCode>43016</postCode>
+									<settlement>Dublin</settlement>
+									<region>OH</region>
+									<country key="US">USA</country>
+								</address>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Eliminating errors: How The Ohio State University is striving for processing perfection with a quality control programme</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<note type="submission">Received (in revised form): 7th May, 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.6.2-SNAPSHOT" ident="GROBID" when="2020-11-01T14:11+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>quality control</term>
+					<term>CASI</term>
+					<term>gift processing</term>
+					<term>fundraising</term>
+					<term>data</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>is a business transformation leader who has driven his employers and client organisations to achieve near-term objectives and better long-term results through innovation and quality management. As an American Society for Quality (ASQ) Certified Quality Engineer and Certified Manager of Quality, he has strengthened the operational capabilities and process improvement expertise for all the teams he has supported since 1998. His first book, Six Sigma Green Belt, Round 2, was published by Quality Press in 2011 and serves as a guide for successful improvement project execution.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>Fundraising models in today's datadriven world require information to be collected and stored more accurately than ever before. In order to fundraise most effectively, the advancement team must know as much as possible about an individual or company and keep up with the various changes to contact information that occur. When managing the thousands of transactions that are processed at an institution of higher education, having specific guidelines and checks in place will ensure that the donors, alumni and friends of the university feel confident that their gifts are being handled with care. In addition, the accuracy of contact data becomes imperative for the success of the mission and keeps individuals engaged with us. Also, the accuracy of donor data enables more secure contact, and cybersecurity is always a growing concern.</p><p>With this in mind, it has become an urgent priority for The Ohio State University (OSU) to document processing guidelines and create thorough validation checks of their data to ensure everything is being handled to the highest standard and to instil a sense of trust so donors will continue to support the institution.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>THE CASE FOR QUALITY CONTROL</head><p>The case for a quality control (QC) programme in fundraising is clear. OSU's</p><p>• Managing personnel changes due to retirements and turnover • Feeling the institution's need to better tell the story about the quality of their work • A growing desire to create a statistically valid accuracy rate (AR)</p><p>These forces created the opportunity for procedural adjustments and a new way of working. There was some lack of standardisation in processing and in process documentation. The department lacked a good way to justify the quality of the work the department was doing, as many times the only reason people would hear about the processing of the gift was if something went wrong. The biggest goal of this programme was to determine how to stop errors before happening (prevention) or, at the very least, correct any errors before donors had a chance to see them (detection).</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>QUALITY CONTROL PROGRAMME DEVELOPMENT</head><p>Starting to create the QC programme brought several challenges to light. The QC team met with members of Advancement Records to determine the most important starting points. The initial programme gave rise to the organisational chart shown in <ref type="figure">Figure 1</ref>.</p><p>1. Two positions specifically that could dedicate 50 per cent of their time to develop and work on this programme. This was made possible due to automation and efficiencies the department had already implemented in other areas of processing.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head n="2.">Documentation of what was consid-</head><p>ered the most used or most complicated processing situations.</p><p>3. Development of an AR for each processor as well as a group average, which was reported monthly. 4. Reviewing every pledge and planned gift that was manually entered into the system to identify any errors. 5. Later the team also focused on reviewing bio update requests that were made via their e-mail box.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>DEVELOPING A GIFT PROCESSING ACCURACY RATE</head><p>As donations tend to be a major focus of fundraising, the OSU advancement team determined that the most important thing to design was a robust way to calculate the AR of the processing of donations. As the QC team studied how to create an AR for processing gifts, they began to consider all the things that go into this process. When they first developed this AR, they decided there were 20 possible data points that a gift could contain, which over time was increased to the current state of 33. The team further broke these out into what were considered external points, which were items that would be visible to the donor and might affect the receipt or acknowledgment, and internal points, which are the department processing rules for standardisation. The details and circumstances in the fundraising industry are not always perfectly defined, so they also left room for anything extra that falls outside of these points with a miscellaneous bonus category. The advancement records team reassesses the gift review points annually, so if something is showing up often enough, they will consider adding a new permanent point to gift review. While 33 seems like a high number, it is the maximum number of options on the current list. Most gifts tend to have no more than eight or nine points, with the most common fields being Donor, Fund, Appeal, Address and Name. Out of the 700,000 gifts Advancement Records processes, only around 95,000 are manually processed by one of the specialists. The others are handled through an upload process that includes match logic based on donor information. Even while that number is smaller, there is no way two individuals can review all 95,000 manually processed gifts. The QC reviewers try to make the review of manual gifts as random as possible. They designed queries that pull all the gifts an individual has processed that have not been reviewed and then select gifts at random from the query. For each gift that is reviewed, they attach an attribute to show in the database that someone has already looked at the gift. In order to organise how they were tracking the gift review points for each transaction, they created spreadsheets for each processor. These sheets include the date of when the QC team member performed the gift review check and how they found the gift, classified either as 'Identified' if the error was found outside the scope of gift review or 'Gift Review' if it was found during normal checks. Identified gifts are brought to the team's attention because of a problem. As such, they are not included in ARs as they are not considered a random selection. Other fields in the spreadsheet include the ID of the gift in the database, how many points were possible, how many points were earned, any information or errors found, the date the gift was corrected (this will be blank if the processor is responsible for making the adjustment), any additional notes, any miscellaneous bonus that was awarded and the date an identified error was processed.</p><p>A summary screen showing Gift Review status is captured in <ref type="figure" target="#fig_0">Figure 2</ref>. These Gift Review sheets actively engage the team members in the evaluation process to minimise the mystery or ambiguity in the QC process. The processor can also view their AR for the month, rolling AR for the last 12 months and AR for each specific point that the QC team reviews so they can easily monitor where any common errors are happening. The person doing the work (the processor) will also have an idea of how many gifts may be reviewed the following month. Gift Review for the processor may not happen every day so the processor is asked to review this once a week to make any changes that the reviewers did not make. The person performing the quality check (the reviewer) will only make the change if the error affects the receipt directly. represents the points that fall above the average AR the group holds. The reviewers choose to look at these based on percentage rather than the count of errors because some points do not happen with every gift. In the case of appeal, almost every gift will have an appeal point. In the case of documentation (docs), not every gift will require additional documentation. If one compared the total number of errors made in appeal codes to documents, the appeal error is bound to be a higher count just because the frequency of the point is higher. <ref type="figure" target="#fig_1">Figure 3</ref> shows the 18 categories where the fewest errors in gift processing occur. This is an example of a chart that the QC team may create monthly in order to monitor what sorts of things are going well in their department. Many of the 'external' points (donor, fund, address, name, noncharitable and benefits are six of the eleven external points) fall above this 99 per cent average.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>REVIEWING GIFT-PROCESSING DATA What's going well</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>What may be an issue</head><p>Figure 4 reflects areas that have room for improvement or fall close to the average AR for the group. The QC team and managers normally take a look at this chart monthly to see if there are ways to improve training for the group or determine if something needs to be done on an individual level to improve some of these points. Many of these fall into what are considered to be 'internal' points. Notice in <ref type="figure" target="#fig_2">Figure 4</ref>, redaction is one point that will almost always show as 0 per cent. OSU is an image-based processing shop, and all the gifts come through redacted of account numbers or any personally identifiable information. This makes it difficult to see if someone went out of their way to correct this, but easy to see that it was not done if it should have been.    number of points the QC members look at for a gift, improvements in the hiring and onboarding programmes and development of better processes and documentation.</p><p>There was a significant dip in the AR in August 2016. When one QC person was out on leave, this resulted in reviewing half the gifts because there was not time for the one member to absorb this work. After an internal review, the QC team implemented reviewing the same number of gifts whether a person was out or not. The team also will try to review the same number of gifts for a processor even if s/he is out for a portion of the month to make sure these numbers stay as consistent as possible.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CALL FOR A NEW METHOD</head><p>After two years with their two team members reviewing around 650 gifts a month, the QC team worked with a Certified Quality Engineer, Tracy Owens, to develop a different way to review gifts. Tracy was an external consultant who had taught a class on Lean Thinking to the Advancement staff at OSU in early 2016. During that session, the Advancement Records team keyed on a point that he was making about sample sizes and sampling plans. He had developed a method for distributing the collection of samples among team members based on their performance, and this conversation led them to the idea of testing this new method called CASI, which is described in detail later.</p><p>First item to address, however, was the issue of the large number of samples that were required monthly. While the previous method was effective, the workload was extremely heavy. They wanted to free up time in the QC area to allow them to focus on other types of work to review in addition to gifts. Tracy helped the QC members realise that the current  method of reviewing gifts was giving an AR more precise than needed. In fact, the sample size led to results as precise as what was needed for the medical field. While Advancement Records want to be as accurate as possible in the fundraising profession, this level of precision was not necessarily the best use of time, as the individuals in the department were not making that many errors. Using standard sample size calculations, the performance history of the team is an important factor in determining how many units require evaluation. The calculation shown here includes three variables that dictate the required sample size (n): Solving this equation based on the current 650 samples (n) and the average proportion defective (P) of only 1 per cent, there is a degree of precision (Δ) of 0.0078 or less than 1 per cent margin for error. Given that the team's AR was already 99 per cent, the allowable margin for error could be increased, even doubled, without sacrificing accuracy in the QC process. Tracy prepared a new equation using 1.6 per cent as the margin for error and the new required sample size dropped to 150 gifts per month. Without losing granularity in their analysis, the QC team would save significant time.</p><formula xml:id="formula_0">( ) ( ) = ∆             * * − n Z P P 1 2 n:</formula></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CASI METHOD</head><p>Tracy's CASI method is an evaluation process, broken into four distinct groups that maximises QC accuracy and worker efficiency. The CASI tool is shown in <ref type="figure">Figure 6</ref>. The sample size calculation is only one aspect of the QC process. Also needed is the method for selecting the distribution of samples. His model for quality evaluation is called CASI, which is a comparison of the level of effort required to find errors vs the recent performance of the provider, and it is statistically validated using the sample size calculations.</p><p>There are two levels or quality evaluations that are based on low expected quality: Inspect and Sample. When someone is new at a specific job or has experienced a rash of errors, the work is classified as Inspect. For this group, the QC team or that person's manager is instructed to inspect 100 per cent of that operator's work because it is too risky to let any output go unchecked. For Sampling, which is the next level up after that operator or supplier demonstrates a higher level of quality, a certain percentage of their work will be inspected before the work is released to the customer or to the next step in the process. If someone fails at Sampling, they may have to bump back down to Inspect.</p><p>Notice that Sampling and Inspect are on the right side of the line; this means those quality measures are taken while the process is under way, before it is complete, so that problems can be detected before the work is released. The next two levels take place after the work is complete. Audit is achieved after © HENRY STEWART PUBLICATIONS 2397-0626 JOURNAL OF EDUCATION ADVANCEMENT &amp; MARKETING VOL. 5, NO. 3, 1-14 WINTER 2020 sufficient accuracy has been shown at the Sampling level. A smaller set of output is checked after the work is done only to ensure that quality was achieved and so that damage control can be managed if a problem is uncovered. The highest level of CASI is Certified, where one has demonstrated high quality for long enough to be fully trusted, and no review of their work is prescribed. As shown across the bottom of the diagram, Certified requires a lot less effort from supervisors than Inspection. individuals with monthly feedback of their AR. Based on these percentages, they review a certain number of gifts per processor every month. While the CASI model is designed to have Certified employees not reviewed, the QC team decided to keep reviewing a minimal number of gifts for each person because of how often their business rules change. Based on the sample size calculation, Advancement Records requires at least 150 gifts as a group to be reviewed each month. The QC team now uses these numbers as a guide to determine how many gifts per level need to be reviewed. The standard guidelines are:</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>ADJUSTMENT OF CASI TO FIT OSU'S NEEDS</head><p>• Certified has 6 gifts • Audit has 10 gifts • Sample has 25 gifts • Inspect has every gift If those gift counts do not add up to 150 in a month, they will add 1 or 2 gifts per processor or however many is required to get to 150 gifts. They also incorporated in a minimum number of points required for a processor as some gifts are much simpler than others.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Minimum = Previous Month's Points per Average Points per Processor Gift × CASI Number per Processor</head><p>They did this because one error would significantly affect an individual's AR. They also inform processors of their rolling 12-month ARs. Many of these adjustments were made due to evaluations on how the process was going and taking into consideration how the processors were adapting to this new process.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CASI IN PRACTICE</head><p>To help better explain how this process works every month, here are a couple different scenarios that may occur and how CASI affects each.</p><p>• Person 1 has been employed here for five years. Based on the previous year's accuracy rate (AR) (99.13 per cent), this individual is Certified for the month of July (so they would check 6 gifts). In July, that person had an AR of 98.92 per cent, so for August, he or she would fall in Audit, which means 10 gifts should be reviewed. In August and September, Person 1 had ARs over 99 per cent so that person will have 6 gifts reviewed in September and October.</p><p>• Person 2 has a bit of a different situation, as he or she has not been a part of gift review for three months, which is what they require before having them fall into the chart completely. Although their AR is in the Certified range, they are still going to review them based on Sample, so 25 gifts in July. As July marks the third month of gift review, in August they will begin actually being scored based on CASI. As this person had a 98.92 per cent in July, they would review them based on Audit in August, so 10 gifts. In August, this person received a 98.67 per cent, so again would fall into Audit, and so on. <ref type="figure">Figure 7</ref> shows how the ARs with CASI compare to ARs before CASI. The gray line will show the group AR in FY18 before CASI was implemented. The horizontal gray line shows the average for FY18. The yellow line shows the AR using the CASI method, as there is a little more variability with the percentages. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>OTHER THINGS DONE TO IMPROVE QUALITY</head><p>Now that one knows how the QC team in Advancement Records reviews gifts, here are a couple other things the team has implemented or monitors for quality purposes. They worked with the Information Technology (IT) department to build batch audit checks in gift batches. Currently, there are 13 checks that will not allow a person to commit a gift batch. These checks will monitor for common OSU business rules that apply to gifts:</p><p>• Gifts with no valid address that are not marked DNR • Gifts over US$2,500</p><p>• Benefits attached to a gift with a US$0.00 amount • Gifts to certain funds that require a gift description Members of the QC team also scan through all print receipts for errors before the departments send them out to donors. They also review every gift over US$2,500 to examine for any processing errors as well as have a process that is similar to gift review for biographic requests that come into an e-mail inbox. There are similar sheets and point structures for these bio requests.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>NEXT STEPS</head><p>The best programmes are not set in stone and tend to evolve. Every year Advancement Records reconsiders how to expand the programme and make it better. This year some things QC is going to look into are:</p><p>• How to review biographic information and what is reviewed. This area is lacking because requests come in from many different areas, and checking becomes difficult without the source of the update, which is not required for all updates. • How to implement CASI for bio review • How to review a Deputy Programme that allows people to have access to make certain updates outside of the department. There is a training programme for those that have expanded, but there is a need to come up with more ways to monitor if these individuals are following the business rules and making the correct updates. • This situation is similar with student work and a need to focus on how to monitor their updates as well. • How to work with the IT department to create similar audit checks for bio data, which would require certain information or updates be made for different type of biographic updates, such as adding an organisation or deceasing an individual in their database.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IMPLEMENTATION AT SMALL SHOPS</head><p>One may be thinking 'This programme would be great if I could get a similar programme implemented for my team'. Many of these checks and ideas can be implemented into any organisation even if it is at a different scale. This may mean starting with a smaller number of gifts per processor or focusing on certain problem areas specifically.</p><p>• Start Small. This programme has been in the works for several years to get to where it is now. OSU tried many solutions to get here and this should not be defined as a 'final product'. Some of the solutions were effective and they were maintained while others did not work or needed to be adjusted as the department changed. Starting with one specific solution will allow to focus, observe and adjust before moving on to another method of review and tracking. Day by day, the effects of these small changes may not visible, but the programme will be easier to manage in the long run.</p><p>• Determine the Organisation's Needs.</p><p>Where are the problem areas? Does one need to map out processes and document them? Does one need to determine an AR for processes? Does one need to review the biographic updates? Every organisation has different problems or data points that need focus. While the initial focus was gift processing accuracy, the organisation may have a greater need to focus on biographic data or creating documentation before diving into gift-processing accuracy. Determining the needs of the organisation will help focus one's efforts and determine the best way to start working towards the goals. As one determines the greatest need of the organisation and develop that area, one can start exploring other ways to expand the programme to fit other needs. • Adjust the Programme. Review this programme regularly to see if it is still working and always be willing to change to make it better. Being nimble will allow to explore other ideas instead of being set on one method of doing something. Even if one method is working well enough, there is always room to explore new methods to increase efficiency and open up time to strengthen or expand the programme.</p><p>OSU's results will look different than other institutions' results, and that is expected. The most important thing is to strive to improve the current method and organisation, which may include learning problem areas that never seemed to exist or finding many methods on how not to do something. At the end of the day, the pitfalls will drive the successes, and doing so will give the data one needs to tell their story. That is, after all, the spirit of continuous improvement.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>FIGURE 2</head><label>2</label><figDesc>FIGURE 2 Gift Review summary screen</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>FIGURE 3</head><label>3</label><figDesc>FIGURE 3Accuracy rate by gift element across all reviewed -these elements were found to have been processed correctly over 99 per cent of the time Note: AR, accuracy rate.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>FIGURE 4</head><label>4</label><figDesc>FIGURE 4Accuracy rate by gift element across all reviewed -these elements were reviewed successfully less than 99 per cent of the time Note: AR, accuracy rate.</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>FIGURE 5</head><label>5</label><figDesc>FIGURE 5 Performance improvement from 2014 to 2019</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_0"><head></head><label></label><figDesc>Organisational chart for the gifts and biographical records team Notes: EFT, Electronic Funds Transfer; QC, quality control.</figDesc><table><row><cell cols="2">Eliminating Errors: How tHE oHio statE UnivErsity is striving for procEssing pErfEction witH a qUality control programmE</cell></row><row><cell>6. Individual relationship</cell><cell></cell></row><row><cell>7. Organisational relationship</cell><cell></cell></row><row><cell>8. Pledge/planned gift/matching gift</cell><cell></cell></row><row><cell>link</cell><cell></cell></row><row><cell>9. Internal comment</cell><cell></cell></row><row><cell cols="2">Biographic Records 1 Payroll and EFT 2 Assistant Director Assistant Director 1 QC Supervisor 1 QC Coordinator 1 Matching Gift Assistant Director 1 Manager of Pledges 6 -7 Student Employees 10. Recognition credits 7 Gift and Bio Specialists 2 Deputy Training Coordinators 11. Matching gift form received 12. Matching gift claim designation 13. Tribute set up 14. Documentation 15. Research 16. New record 17. Miscellaneous bonus 18. Gift-in-kind category 19. Stock/gift-in-kind 20. Contact type 21. Redaction FIGURE 1 Director of Gift and 22. Contact restriction</cell></row><row><cell></cell><cell>7. Special receipt</cell></row><row><cell></cell><cell>8. Noncharitable</cell></row><row><cell></cell><cell>9. Gift description added</cell></row><row><cell></cell><cell>10. Tribute</cell></row><row><cell>External Points:</cell><cell>11. Benefits</cell></row><row><cell>1. Donor 2. Fund</cell><cell>Internal Points:</cell></row><row><cell>3. Address</cell><cell>1. Appeal</cell></row><row><cell>4. Name</cell><cell>2. Phone</cell></row><row><cell>5. Do not receipt (DNR) or do not</cell><cell>3. E-mail</cell></row><row><cell>acknowledge</cell><cell>4. Nickname</cell></row><row><cell>6. DNR spouse</cell><cell>5. Middle initial</cell></row><row><cell cols="2">© HENRY STEWART PUBLICATIONS 2397-0626 JOURNAL OF EDUCATION ADVANCEMENT &amp; MARKETING VOL. 5, NO. 3, 1-14 WINTER 2020</cell></row><row><cell>JEAM0178_REGAN_OWENS.indd 4</cell><cell>24/07/20 5:39 PM</cell></row></table></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_7"><head>TABLE 1 Sample</head><label>1</label><figDesc>CASI scorecard for two team members</figDesc><table><row><cell></cell><cell cols="2">FY Average (%) July (%)</cell><cell>August (%)</cell><cell cols="2">September (%) October</cell></row><row><cell>Person 1 (5 Years) Accuracy</cell><cell>99.13</cell><cell>98.92</cell><cell>99.23</cell><cell>99.46</cell></row><row><cell>Person 1 CASI</cell><cell></cell><cell>C</cell><cell>A</cell><cell>C</cell><cell>C</cell></row><row><cell>Person 2 (2 Months) Accuracy</cell><cell>99.13</cell><cell>98.92</cell><cell>98.67</cell><cell>99.47</cell></row><row><cell>Person 2 CASI</cell><cell></cell><cell>S</cell><cell>A</cell><cell>A</cell><cell>C</cell></row></table><note>© HENRY STEWART PUBLICATIONS 2397-0626 JOURNAL OF EDUCATION ADVANCEMENT &amp; MARKETING VOL. 5, NO. 3, 1-14 WINTER 2020 • • Large gifts entered outside batch</note></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">© HENRY STEWART PUBLICATIONS 2397-0626 JOURNAL OF EDUCATION ADVANCEMENT &amp; MARKETING VOL. 5, NO. 3, 1-14 WINTER 2020</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JEAM0178_REGAN_OWENS.indd 524/07/20 5:39 PM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JEAM0178_REGAN_OWENS.indd 624/07/20 5:39 PM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JEAM0178_REGAN_OWENS.indd 924/07/20 5:39 PM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JEAM0178_REGAN_OWENS.indd 1024/07/20 5:39 PM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JEAM0178_REGAN_OWENS.indd 1124/07/20 5:39 PM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">Regan and Owens© HENRY STEWART PUBLICATIONS 2397-0626 JOURNAL OF EDUCATION ADVANCEMENT &amp; MARKETING VOL. 5, NO. 3, 1-14 WINTER 2020</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JEAM0178_REGAN_OWENS.indd 1424/07/20 5:39 PM</note>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<monogr>
+		<title level="m" type="main">The Z score needed for a 95% confidence level is 1.96. To simplify the math</title>
+		<imprint/>
+	</monogr>
+	<note>round up to 2, which actually provides 95.5% statistical confidence in the results</note>
+	<note type="raw_reference">The Z score needed for a 95% confidence level is 1.96. To simplify the math, round up to 2, which actually provides 95.5% statistical confidence in the results.</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<monogr>
+		<title level="m" type="main">F-notes: Facilitation for quality</title>
+		<author>
+			<persName><forename type="first">Casi</forename><surname>For More On</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Owens</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>Steiner</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020" />
+			<publisher>ASQ Quality Press</publisher>
+			<pubPlace>Milwaukee, Wisconsin, USA</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">For more on CASI, see Owens, T. and Steiner, T. (2020) &apos;F-notes: Facilitation for quality&apos;, ASQ Quality Press, Milwaukee, Wisconsin, USA.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>
