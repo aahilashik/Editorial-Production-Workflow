@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Review - Dashboard</title>
+
+	<link rel = "icon" href = "https://ria.gallerycdn.vsassets.io/extensions/ria/nlp/0.2.11/1487192519683/Microsoft.VisualStudio.Services.Icons.Default" type = "image/x-icon">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+</head>
+
+
+<style>
+
+body {
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+h1 {
+  text-align: center;
+  color:#1f4068;
+  font-weight:bold;
+  
+}
+.disable {
+   pointer-events: none;
+   cursor: default;
+}
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../static/load1.gif') 
+              50% 50% no-repeat rgba(255, 255, 255, 0.4);
+}
+
+.generate{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('https://s3.amazonaws.com/msc-media-linux-production/5e0ea029945d6.gif') 
+              50% 50% no-repeat rgba(255, 255, 255, 0.4);
+}
+
+.specific {
+	background-color: #e97b01;
+}
+.display {
+	background-color: rgba(255, 255, 255, 1);
+}
+  
+</style>
+
+
+<body>
+	<div class="loader" id="img" style="display:none;"></div>
+
+	<div class="generate" id="img1" style="display:none;"></div>
+	
+	<br>
+	
+	<div class="container specific" style="font-family:candara; font-weight:bold; color:#1f4068;border-radius: 8px;">
+	
+		<br>
+
+		<div class="container display" style="border-radius: 4px;">
+			<br>
+			<h1>REVIEW - MANUSCRIPT</h1> 
+			<br> 
+		</div>
+
+		<form method="post">
+		
+			<br>
+			
+			<div class=" display" style="border-radius: 4px;">
+				<br>
+					{% csrf_token %}
+					<div class="form-group row" style="font-size: 20px;justify-content: center;width:100%;">			
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">REFERENCE ID</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="unique_id" value="{{Ref_ID}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">WORD COUNT</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="word_count" value="{{Word_Count}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">PLAG CHECK REPORT</label>
+						<label class="form-control col-sm-3" style="margin-top:1%;">Status : Not Generated{{status}}</label>
+						<input type="submit" name="button" class="col-sm-2 btn btn-outline-secondary mt-1" style="margin-top:1%;margin-right:12%" onclick="$('#img1').show();" value="Create">
+						<label style="width:30%;margin-top:0.5%;margin-left:15%"></label>
+						<a class="form-control disable col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;" href="{{link}}" target="_blank">Link</a>
+						<a class="form-control disable col-sm-3 btn btn-outline-primary" style="margin-top:0.5%;margin-right:12%" href="{{link}}">Download</a>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">RIGHTS & PERMISSION LOGS</label>
+						<a class="form-control col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;" href="logs/{{Ref_ID}}" target="_blank">Open</a>
+						<a class="form-control disable col-sm-3 btn btn-outline-primary" style="margin-top:0.5%;margin-right:12%" href="{{link}}"></a>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">EMAIL ID</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="mail_id" value="{{Mail_ID}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">DOI</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="doi" value="{{DOI}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">ARTICLE TITLE</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="article_title" value="{{Article_Title}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">ARTICLE TYPE</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="article_type" value="{{Article_Type}}" readonly>
+					
+						<label style="width:30%;margin-top:1%;margin-left:15%">PUBLISHED DATE</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="published_date" value="{{Published_Date}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">AUTHOR(s)</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="authors" value="{{Authors.0}}" readonly>
+						<div class="field_wrapper" style="width:100%;">
+							{% for author in Authors|slice:"1:" %}
+								<div class="row" >
+									<label style="width:30%;margin-top:1%;margin-left:15%" >&nbsp;</label>
+									<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="authors" value="{{author}}" readonly>
+									
+								</div>
+							{% endfor %}
+						</div>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">NUMBER OF FIGURES</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="no_of_figures" value="{{No_of_Figures}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">NUMBER OF TABLES</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="no_of_tables" value="{{No_of_Tables}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">ABSTRACT</label>
+						<textarea class="form-control col-sm-5" name="abstract" rows="4" style="resize:none;margin-top:1%;margin-right:12%;border-radius:5px;" readonly>{{Abstract}}</textarea>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">SPECIAL INSTRUCTIONS</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="spl_instruct" value="{{Special_Instructions}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">CONFLICT OF INTEREST</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="c_Interest" value="{{Conflict_of_Interest}}" readonly>
+
+						<label style="width:30%;margin-top:1%;margin-left:15%">FUNDING DETAILS</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="funding" value="{{Funding}}" readonly>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">MESSAGE</label>
+						<textarea class="form-control col-sm-5" name="message" rows="4" style="resize:none;margin-top:1%;margin-right:12%;border-radius:5px;" readonly>{{Message}}</textarea>
+						
+						<input type="submit" style="" name="button"  class="btn btn-dark mt-2 mb-2"  onclick="$('#img1').show();" value="SUBMIT">
+						
+						
+
+					</div>
+				<br>
+			</div>
+		</form>
+		
+		<br>
+	</div>
+	<br>
+
+</body>
+</html>

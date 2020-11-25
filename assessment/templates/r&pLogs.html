@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <title>Rights & Permission Logs</title>
+  
+  <link rel = "icon" href = "https://www.koshiviklang.org/img/annual_report.png" type = "image/x-icon">
+  
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+</head> 
+<body> 
+  
+	<div class="row" style="width:100%;">
+	  <h2 class="text-center" style="width:90%;margin-left:5%"><u>Rights and Permission Logs</u></h2>
+	  <br>             
+	  <a class="form-control col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;margin-left:auto;margin-right:auto" href="download/{{Ref_ID}}">Download</a>
+	  
+	  <table class="table table-dark table-striped" style="width:90%;margin-top:2%;margin-left:5%"> 
+		<thead> 
+		  <tr style="width:90%;"> 
+			<th style="width:5%"></th> 
+			<th style="width:10%">Chapter</th> 
+			<th style="width:10%">Content Type</th> 
+			<th style="width:35%">Illustration Title</th> 
+			<th style="width:5%">Count</th> 
+			<th style="width:35%">Source</th> 
+		  </tr> 
+		</thead> 
+		<tbody> 
+
+		{% for df in dataFrame %} 
+		  <tr> 
+			<td style="width:5%">{{forloop.counter}}</td> 
+			<td style="width:10%">{{df.Chapter}}</td> 
+			<td style="width:10%">{{df.Type}}</td> 
+			<td style="width:35%">{{df.Title}}</td> 
+			<td style="width:5%">{{df.Count}}</td> 
+			<td style="width:35%">{{df.Source}}</td> 
+		  </tr> 
+		{% endfor %}
+		
+		</tbody> 
+	  </table> 
+	</div> 
+	  
+</body> 
+</html> 

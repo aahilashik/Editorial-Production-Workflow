@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /home/lopez/grobid/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Developments in China&apos;s Data Protection and Privacy Regulatory Regime</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author role="corresp">
+							<persName><forename type="first">Lilly</forename><surname>Langford</surname></persName>
+							<email>lilly.langford@outlook.com</email>
+							<affiliation key="aff0">
+								<note type="raw_affiliation">Queensland University of Technology, Australia</note>
+								<orgName type="institution">Queensland University of Technology</orgName>
+								<address>
+									<country key="AU">Australia</country>
+								</address>
+							</affiliation>
+							<affiliation key="aff1">
+								<note type="raw_affiliation">Tsinghua University School of Law.</note>
+								<orgName type="department">School of Law</orgName>
+								<orgName type="institution">Tsinghua University</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Developments in China&apos;s Data Protection and Privacy Regulatory Regime</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+					<note type="submission">Received: 14th April, 2020</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.6.2-SNAPSHOT" ident="GROBID" when="2020-11-01T14:10+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>data protection</term>
+					<term>cybersecurity</term>
+					<term>compliance</term>
+					<term>PRC Cybersecurity Law</term>
+					<term>COVID-19</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>On 1st June, 2017, the People's Republic of China (PRC) Cybersecurity Law (CSL) came into force and became the first comprehensive privacy and security regulation for cyberspace and data protection. The CSL represents the gradual formation of China's new legal framework for cyber security and data protection, despite the regime being split across various legislation and industry-specific regulations (including their draft versions). In light of the rapidly evolving regulatory environment, the broad and sometimes vaguely expressed obligations imposed by the CSL have added further complexity to the system and attracted significant attention and criticism from international companies due to its unclear application, lack of protection authority, harsh penalties, fear of stolen intellectual property and strict compliance obligations. While new judicial developments seek to gradually provide clarification of the law -as seen in the outbreak of the COVID-19 pandemic -continuous and thorough review of cybersecurity measures will place foreign entities, 'network operators', and 'critical information infrastructure operators' in a position to effectively manage unprecedented, paradigm-shifting compliance obligations and risks. This paper outlines China's data protection and privacy landscape and regulatory framework, provides a thorough analysis on important provisions of the CSL, and comments on recent legislative changes. Further, this paper will engage in an in-depth discussion on compliance procedures for best practice, compare the CSL with the European General Data Protection Regulation (GDPR), and analyse the impact of coronavirus disease 2019 (COVID-19) pandemic on PRC data privacy legislation.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>With the rapid development of the digital economy in China, the rise of many new noncontroversial and controversial technologies calls for immediate data protection and cybersecurity governance. Significant technological advances across information communications technology; artificial intelligence (AI) -especially machine learning and robotics; quantum computing; nanotechnology; biotechnology and space technology bring great disruption and major transformative shifts in societal function. Currently in China there is no omnibus privacy and data protection law, but rather, provisions on privacy and data protection are mainly found within laws and the industry-specific regulations. Although China's emerging data regime is unfinalised, its contours are beginning to shape amid ongoing debate and discussion with the government bodies and the industry. China's efforts to move forwards with building a national data regulatory regime imposes major implications for the international interoperability of Chinese and multinational companies (MNCs), particularly in the rapidly changing economic conditions as seen today. This paper outlines China's data protection and privacy regulatory framework, provides a thorough analysis on important provisions of the CSL, and comments on recent legislative changes. Further, this paper will engage in an in-depth discussion on compliance procedures for best practice, compare the CSL with the European General Data Protection Regulation (GDPR), and analyse the impact of coronavirus disease 2019 (COVID-19) pandemic on PRC data privacy legislation.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>OVERVIEW OF DATA PROTECTION LANDSCAPE AND REGULATORY FRAMEWORK</head><p>China's cybersecurity and data protection law cannot be pinpointed to a single piece of legislation but is rather spread across a complex framework of regulations, measures, guidance notices, and national standards. Collectively, the culmination of these measures has built China's cybersecurity and data protection legal framework incrementally. <ref type="bibr" target="#b0">1</ref> Although preexisting laws may already account for data protection, the CSL is a milestone for China in the sense that its requirements on data protection and privacy are more comprehensive than before and broader than its Western counterparts. <ref type="bibr" target="#b1">2</ref> The implementation of the CSL not only allows the nation-state to hold more power to monitor the risks and threats associated with cybersecurity, but also imposes greater state control and censorship enforcement over businesses and internet users. <ref type="bibr" target="#b2">3</ref> Such developments echo Chinese President Xi Jinping's dictum that 'without cybersecurity there is no national security'. <ref type="bibr" target="#b3">4</ref> Background and Foundation of the PRC Cybersecurity Law In November 2016, the Standing Committee of the National People's Congress (NPC) adopted and passed the PRC Cybersecurity Law. <ref type="bibr" target="#b4">5</ref> On 1st June, 2017, the PRC CSL came into effect and became the first national-level law to address cybersecurity and data privacy protection issues. <ref type="bibr" target="#b5">6</ref> This law is not standalone legislation but rather a milestone in a series of policy initiatives and legislation aimed at strengthening the protection of national security and cybersecurity in recent years. The CSL has been crafted on the concept of 'cyberspace sovereignty' as an indispensable foundation for China's authoritarian control over the internet together with the Great Firewall, the National Security Law, the Counterterrorism Law and other internet regulations. <ref type="bibr" target="#b6">7</ref> Overall, the CSL aims to cover: personal information protection; general network protection obligations of the network operators and the multi-level protection scheme (MLPS); enhanced protection for the critical information infrastructure (CII); data localisation and security assessment for the cross-border transfer of personal information and important data; and security review of the network products and services. Unlike the sectoral laws in the United States, PRC legislation provides citizens with basic protections against private network operators, but conversely leaves data processing in the public sector largely unregulated. <ref type="bibr" target="#b7">8</ref> In addition to the CSL and supplementary regulations, the combination of the Decision on Strengthening Online Information Protection, effective from 28th December, 2012; National Standard of Information Security Technology -Guideline for Personal Information Protection within Information System for Public and Commercial Services, effective from 1st February, 2013; and National Standard of Information Security Technology -Personal Information Security Specification ('PIS Specification'), effective from 1st May, 2018, form the main bridge of general data protection rules currently applicable in the PRC jurisdiction. <ref type="bibr" target="#b8">9</ref> Similar to the National Security Law, the CSL empowers the government to monitor and control the flow of information and increase the scrutiny of foreign technologies. <ref type="bibr" target="#b10">10</ref> Moreover, scattered provisions in various pieces of legislation and standards including, but not limited to, the CSL, PRC E-Commerce Law, PRC Consumer Rights Protection Law and PIS Specifications may also apply depending on the type of industry and information specifics involved in each circumstance. <ref type="bibr" target="#b11">11</ref> HIGHLIGHTS AND KEY PROVISIONS OF THE CSL Within its 79 articles, the CSL establishes certain national mechanisms to protect cybersecurity and imposes obligations on all parties. Article 111 of the General Provisions of the Civil Law of the PRC ('Civil Law') effective as on 1st October, 2017, provides, 'a natural person's personal information shall be protected by law. In case any organization or individual needs to obtain other's personal information, they shall obtain legally and ensure the security of such information, and shall not illegally collect, use, process, transfer other's personal information, nor illegally sell, provide or publish other's personal information'. <ref type="bibr" target="#b12">12</ref> Thus, the said general provisions of the Civil Law confirm the legal status of 'personal information' as a basic civil right and interest. Key legislative provisions of the CSL will be examined below, including: personal information protection; defence of CII; obligations of network operators; data localisation requirement; security certification, inspection and review; and preservation of sensitive information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Personal Information Protection</head><p>The CSL provides citizens with an unprecedented amount of protection to ensure their data privacy by clearly stating the requirements for the collection, use, and protection of personal information. The CSL defines 'personal information' as 'all kinds of information that identifies a natural person either by itself or in combination with other information'. <ref type="bibr">13</ref> This includes, but is not limited to, 'a person's name, address, telephone number, date of birth, identity card number and biometric identifiers'. 14 Furthermore, the PIS Specifications extended 'personal information' to mean 'any information saved in electronic form or otherwise that can be used independently or together with other information to identify a natural person or reflect the activities of a natural person, including: names, dates of birth, identification numbers, personal biometric information, addresses, contact information, records and content of communications, accounts and the passwords thereof, property information, credit reference information whereabouts and tracks, hotel accommodation information, information concerning health and physiology, information on transactions, etc'. <ref type="bibr" target="#b14">15</ref> Where such information is de-identified, then it will no longer be subject to the requirement for personal information in the CSL.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Collection of Personal information</head><p>Personal information can only be collected when individuals are informed and agree to the aims and scope of the collection. <ref type="bibr" target="#b15">16,</ref><ref type="bibr" target="#b16">17</ref> Usage and collection of personal information must be legal, proper and necessary. <ref type="bibr">18</ref> Generally, the following obligations are imposed on network operators when collecting personal information: a. Network product and service providers that collect users' information are required to inform and obtain consent of the person whose information is col- Amid a growing focus on the leakage of personal information, the CSL displays stringent requirements on the protection of personal information owned by organisations. The obligations of network operators imposed by the CSL specify the requirements for the protection of personal information, especially for avoiding disclosure, damage, and loss of personal information. Building an effective security administration system, finding rational technical solutions, and improving data protection capabilities are expected to be key priorities for network operators. <ref type="bibr" target="#b17">27</ref> In the event of a data breach or potential data breach, network operators are required to take remedial action, promptly inform users, and report to the competent authorities. <ref type="bibr" target="#b18">28</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Collection of Personal Data by Apps</head><p>A new draft of the Information Security Technology -Basic Specification for Collecting Personal Information in Mobile Internet Applications ('Draft') was issued by the App Governance Panel on 25th October, 2019. <ref type="bibr" target="#b19">29</ref> Specifically, the new draft stipulates that when third-party codes or plug-ins are contained in apps that collect personal data and the data subject cannot refuse such collection, the app operator should ensure that third-party codes or plug-ins fulfil the obligation of protecting personal information. <ref type="bibr">30</ref> Moreover, when app operators collect personal data that falls outside the agreed scope of such collection, or when sensitive data is involved, it is necessary to obtain the data subject's consent. <ref type="bibr">31</ref> The new draft revised the list of 'necessary' personal data for a variety of apps including, internet payment, financial loan, and fitness apps. <ref type="bibr">32</ref> In addition to following public data collection terms, app and software developers in China are also required to comply with the government's policies on censorship. Further guidance was provided on 30th December, 2019, by the Cyberspace Administration of China (CAC) entitled Identifying Illegal Collection and Use of Personal Data via Apps ('Guidance'). <ref type="bibr">33</ref> This Guidance set out the specific instances in which the collection and use of personal data via an 'app' is considered unlawful. <ref type="bibr">34</ref> Importantly, the Guidance requires the operators of such 'apps' to ensure that their privacy policies and collection statements are made available in simplified Chinese and appear in pop-up windows or other noticeable ways. <ref type="bibr">35</ref> In addition, the policies and collection statements must be easily accessible by users, specifically, within 'four clicks'. <ref type="bibr">36</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Obligations of Network Operators</head><p>The CSL imposes significant obligations on intermediaries, including: search engines, social media outlets, critical information operators, suppliers of network products and services, network operators, and particularly internet service providers (ISPs). The CSL defines 'network operator' as an owner, administrator or manager of a network and internet service provider. <ref type="bibr" target="#b23">37</ref> Furthermore, a 'network' is any system that consists of computers or other information terminals and related equipment for collecting, storing, transmitting, exchanging and processing information. <ref type="bibr">38</ref> Due to the wide scope and breadth of the definition, enterprises, institutions, or anyone who provides services and conducts business activities over the internet can be considered a 'network operator'. <ref type="bibr" target="#b24">39</ref> Articles 10 and 21 of the CSL state the overall cybersecurity requirements for network operators, whereby 'network operators are required to follow certain security measures, procedures and safeguard networks from interference, destructions, unauthorised access, leakage or tampering'. <ref type="bibr" target="#b25">40</ref> Article 21 of CSL imposes the following security requirements on network operators: (1) implement network security protection responsibilities, formulate internal security management systems, determine employees responsible for network security; (2) mitigate network risks via administration and adoption of technologies to prevent, combat and investigate cyber-attacks; (3) secure data availability and confidentiality with back up and data encryption; and (4) respond to security flaws in their products and services, provide security maintenance, and follow provisions to store network logs for at least six months. <ref type="bibr">41</ref> As mentioned earlier, the law requires an emergency response plan to react and manage cybersecurity incidents, implement remediation measures, and report incidents to relevant authorities. <ref type="bibr" target="#b26">42</ref> Furthermore, network operators are also required to provide technical support and assistance to public security agencies to preserve national security and investigate criminal activity. <ref type="bibr">43</ref> While the CSL has enhanced privacy protection by imposing legal obligations on network operators, that same standard is not imposed on public authorities. <ref type="bibr" target="#b28">44</ref> Failure to fulfil obligations will result in corrections, warnings or fines for both the network operator and personnel in charge by competent authorities. <ref type="bibr" target="#b29">45</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Critical Information Infrastructure</head><p>The definition of CII has currently not been specified by the CSL. The CAC's Cyberspace Security Strategy, released on 27th December, 2016, however, defined CII as 'information infrastructure that affects national security, the national economy and people's livelihoods, such that, if data is leaked, damaged or loses its functionality, national security and public interests may be seriously harmed'. <ref type="bibr" target="#b30">46</ref> Published in July 2017, the most useful document scoping CII is the CAC's draft Regulations on the Protection of Critical Information Infrastructure, whereby the following sectors and business areas are deemed to constitute CII depending on the degree of impact of a cyber breach: a. Energy, finance, transportation, water management, sanitation and healthcare, education, social security, environmental protection and public utilities etc; b. Information networks, such as telecommunications, radio and television, the internet as well as businesses providing cloud computing, Big Data and other large-scale public information network services; c. Scientific research and production in fields such as national defence, industrial equipment, industrial chemicals and food and drugs; d. Radio stations, television stations and other news agencies; e. Other key operations. <ref type="bibr" target="#b33">47</ref> As CII is vital to nation survival, it is seen to be a 'strategic national asset'. <ref type="bibr" target="#b34">48</ref> Enterprises that are qualified to operate CII must store all personal data collected in China of Chinese citizens. Under the CSL, enterprises that are qualified to operate CII have a duty to follow these obligations: (1) establishing security management bodies and conducting background checks for the senior persons in those bodies; (2) conducting training and skills evaluations for employees, conducting backups of key systems and databases, formulating emergency response plans for network security incidents and organising drills; and (3) inspecting and assessing their network's security at least once per year personally or by retaining a professional. <ref type="bibr" target="#b36">49</ref> Whilst the CSL imposes onerous obligations on private CII, the law remains very broad such that effective regulatory clarification protecting critical infrastructure awaits future development. In addition to general legal responsibilities, breach of the requirements imposed by the CSL may result in harsh penalties for foreign entities, such as the freezing of assets and other 'necessary punitive measures'. <ref type="bibr" target="#b37">50</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Security Product Certification</head><p>The CSL includes a complicated security certification, inspection, and review regime. Articles 23 and 35 of the CSL establish that providers can only sell their critical network equipment, products, or services after receiving security certifications, which may require passing a national security review. <ref type="bibr" target="#b38">51</ref> The security review and assessment is designed to ensure the security of personal information and support the secure operations of CII described in the CSL. The CAC released the Measures on Security Review of Network Products and Services ('Interim Measures') on 2nd May, 2017. <ref type="bibr">52</ref> These Interim Measures obligate a committee, established by the CAC, to conduct a security review to ensure services and products are secure and controllable using the following approaches: laboratory testing, onsite inspection, online monitoring, and background investigation. <ref type="bibr">53</ref> The Interim Measures neither identify what type of information will be collected nor specify any appeal or remediation processes that can be followed if the products or services do not pass the security review. According to the Interim Measures, the scope of the security review includes risks that could harm national security; thus, its purpose is seen to prevent products and services from being manipulated by foreign forces. <ref type="bibr">54</ref> Companies have expressed the concern that the current regime exposes and creates more opportunities for the leakage of trade secrets and confidential information regarding information security. Furthermore, Articles 23 and 35 of the CSL place onerous and time-consuming obligations that may inappropriately intervene in the market as the requirements imposed may be used for political purposes to delay or block market access to industries that are CII. <ref type="bibr">55</ref> Despite this, the regulations imposed by the CSL are designed to form an industrial policy and spur investment in the domestic information industry.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data Localisation</head><p>Alongside the implementation of released and drafted legislation, guidelines, and industrial standards, paradigm-shifting requirements such as data localisation by the CSL creates an unprecedented compliance challenge for MNCs with operations in China. <ref type="bibr" target="#b40">56</ref> As mentioned earlier, Article 37 of the CSL imposes data localisation and the data cross-border transfer security assessment obligations on CII operators whereby they:</p><p>'…shall store personal information and important data gathered and produced during operations within the territory of the PRC. Where it is really necessary to provide such information and data to overseas parties due to business requirements, a security assessment shall be conducted in accordance with the measures formulated by the national cyberspace administration authority in concert with the relevant departments under the State Council. Where the laws and administration regulations have other provisions, those provisions shall prevail.' <ref type="bibr" target="#b41">57</ref> As a result, MNCs face the following key concerns: 'whether MNCs should maintain a server in mainland China or store personal information collected in the course of operation in China; <ref type="bibr" target="#b1">(2)</ref> whether MNCs should conduct security assessments and; <ref type="bibr" target="#b2">(3)</ref> how such assessments should be done before personal information are transferred across borders'. <ref type="bibr" target="#b42">58</ref> Not only are MNCs subject to government spot-check and oversight, but these onerous obligations significantly create considerable costs in terms of data management. <ref type="bibr" target="#b43">59</ref> MNCs are unable to mitigate various efficiency, cost, or tax concerns by storing their data on the cloud with servers in different jurisdictions. Particularly, CIIs will not be afforded the efficiency of the internet's distributed infrastructure or cloud technology. For example, Apple outsourced its Chinese iCloud users' data to a local firm, Guizhou-Cloud Big Data Industry Co Ltd, a state-owned enterprise with ties to the Guizhou provincial government. <ref type="bibr" target="#b44">60</ref> In contrast, computer manufacturer, AsusTek withdrew its Asus Cloud service from China because of the aforementioned compliance concerns imposed by the CSL. <ref type="bibr" target="#b47">61</ref> The large expense attached to building new data centres increased data storage costs for both consumers and businesses. Economically, data localisation laws are seen to create a trade barrier for both MNCs and domestic internet companies looking to expand globally. <ref type="bibr" target="#b49">62</ref> In effect, this prevention may 'ultimately lead to the fragmentation of Cyberspace'. <ref type="bibr" target="#b50">63</ref> The greatest concern resulting from data localisation requirements for MNCs is the unmanageable risk of data leaks.</p><p>The obligations imposed by the CSL significantly affect the interoperability of MNCs in China as there is concern over increased vulnerability to government censorship, surveillance, access to proprietary information, and trade secrets. Consequentially, this may threaten the privacy of users, and the aggregation of data in a centralised location increases susceptibility to cybercrimes and hacking. Additionally, there is no clear definition for the terms 'critical information infrastructure' and 'important data', thus making it difficult for foreign entities to predict whether they will fall under the strict data localisation rules. To clarify the restrictions imposed on specific data localisation, industry-specific regulations are applicable, but not limited, to the following industries: banking, <ref type="bibr" target="#b52">64</ref> insurance, <ref type="bibr" target="#b53">65</ref> credit investigation, <ref type="bibr" target="#b54">66</ref> mail/express mail, <ref type="bibr" target="#b55">67</ref> health, <ref type="bibr" target="#b56">68</ref> taxi/rideshare operations, 69 map <ref type="bibr" target="#b60">70</ref> and civil aviation. <ref type="bibr" target="#b61">71</ref> Despite these concerns, the Chinese government has indicated the intention of the PRC data localisation laws does not hinder globalisation via the One-Belt-Road initiative but rather serves as a reminder to regulators and businesses of the risks associated with cross-border data transfer. <ref type="bibr" target="#b62">72</ref> Furthermore, data localisation is an important driving feature of the CSL as it is largely based on the national government's 'claim to cyberspace sovereignty and the assertion that requiring data to stay within the country's borders provides a higher level of security and protection'. <ref type="bibr" target="#b63">73</ref> Due to the harsh penalties imposed for breach, it is likely cross-border and transnational flow of data out of China will be limited.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Legal Liabilities</head><p>In practice, several government agencies, including the CAC, the Ministry of Industry and Information Technology (the MIIT) and the Ministry of Public Security (the MPS), have taken rigid enforcement actions to safeguard cyberspace and ensure the protection of individual's personal information rights with internet services and in offline circumstances. The penalty for infringement of core data protection provisions of the CSL may include a fine of up to ten times the number of unlawful gains or a fine of up to RMB 1,000,000. <ref type="bibr" target="#b65">74</ref> Individuals in charge of and responsible for data protection compliance within an organisation may be separately subjected to a fine of between RMB 10,000 and 100,000 or between RMB 50,000 and 500,000 for serious cases. <ref type="bibr">75</ref> The circumstances in which the unauthorised collection, transfer or receipt of personal data that constitute criminal offences under the PRC Criminal Law as well as the penalties are set out in the Interpretations of the Supreme People's Court and the Supreme People's Procuratorate on several issues concerning the Application of Law in the Handling of Criminal Cases Involving Infringement of Citizens' Personal Information (effective 1st June, 2018). <ref type="bibr" target="#b66">76</ref> LATEST LEGISLATIVE DEVELOPMENTS Amid dissent over the coronavirus outbreak, on 1st March, 2020, the Provisions on Internet Information Content Ecological Governance ('Provisions') came into effect and apply to online information content producers, online information content service platforms, and online information content users, industry organisations and Departments of Cyberspace Administration at all levels. <ref type="bibr">77</ref> These Provisions aim to 'create a healthy cyberspace ecological system, to protect the legal rights and benefits of citizens, legal persons and other organizations, and to safeguard national security and public interests'. <ref type="bibr">78</ref> Most notably, the Provisions specify 11 types of content encouraged by the state for amplified publication and 7 types of restricted content that shall not be produced. <ref type="bibr" target="#b67">79</ref> Furthermore, the Provisions impose obligations on platforms to take measures to prevent the publication of negative content including, but not limited to: gossip; scandals; inaccurate comments regarding natural disasters; sexual provocations; promoting vulgarity and violations of social morality. <ref type="bibr">80</ref> Where producers copy, release or produce prohibited information, the Provisions mandate platforms, among other things, to take appropriate measures against Producers for producing, copying or releasing prohibited Information by issuing warnings, demanding information be corrected or otherwise rectified, imposing functional restrictions, suspending updates, closing accounts and reporting such matters to the relevant department. <ref type="bibr" target="#b68">81</ref> Furthermore, the Provisions even encourage users to weed information ecology online through complaints, reporting, and other monitoring practices. <ref type="bibr" target="#b69">82</ref> The Provisions highlight that not only does China's strict internet censorship extend beyond government criticism but also the vagueness of the regulation may easily give rise to an abuse of power. Breach of the Provisions inflicts both civil and criminal liability, whereas 'serious violations' may be subject to certain restrictions by the relevant Cyberspace administration authorities, including restrictions on business operations and internet activities generally. <ref type="bibr">83</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>COMPARATIVE ANALYSIS WITH GENERAL DATA PROTECTION REGULATION</head><p>To address the imbalance between citizens and organisations that collect, process, and use personal data, both the European Union (EU) and China have developed and adopted different legislative models that target data protection and security in their respective jurisdictions. As mentioned earlier, the culmination of various administrative measures and the CSL make up China's data protection regime. In comparison, the EU has developed the GDPR, which came into force on 25th May, 2018. <ref type="bibr" target="#b70">84</ref> Collectively, the two overlapping measures aim to not only give data subjects more control over personal data, but also place restrictions on how organisations collect, process, and use this data. <ref type="bibr">85</ref> This means that MNCs operating across China and the EU will be subject to these regimes separately in their respective jurisdiction. This section will address the similarities and differences of the two regimes on the following issues: territorial scope; the intention of legislation; processing and sharing of personal data; cross-border transfer; and enforcement.</p><p>Territorial Scope Article 3 of the GDPR uses two key criteria to determine territorial scope: the 'establishment' criterion and the 'targeting' criterion. <ref type="bibr">86</ref> The GDPR applies to an organisation that is (1) established in the EU and processes personal data in the context of any presence -such as a branch or office -in the EU even if the processing of the personal data takes place out of the EU, such as in China; (2) not established in the EU but processes personal data of subjects in the EU relating to the offering of goods or services to such data subjects in the EU or monitors the behaviour of data subjects, such that their behaviour takes place within the EU; (3) processes personal data of subjects that is not established in the EU but monitors the behaviour of data subjects or offers goods or services to such data subjects in the EU and (4) is not established in the EU, but where EU Member State law applies by virtue of international public law. <ref type="bibr" target="#b71">87</ref> Therefore, the GDPR is applicable to entities in China with a connection to the EU because the organisation processing the personal data has a presence there, processes the personal data of EU subjects in the course of selling goods and services, or monitors their behaviour in the EU. <ref type="bibr" target="#b72">88</ref> Unlike the GDPR, the CSL provides no clarification on extraterritorial application. The CSL states it is intended to 'protect [Chinese] citizens, legal persons and other organizations' and is applicable to the 'operation, maintenance and use of computer networks and the supervision and administration of cybersecurity within the territory of the People's Republic of China'. <ref type="bibr" target="#b73">89</ref> Although the CSL does not explicitly state whether it applies to either MNCs collecting personal data from Chinese citizens where the overseas company has no presence in China or Chinese companies collecting personal data from a foreign citizen outside of China only, it is likely the CSL will apply to an overseas company collecting personal data from Chinese citizens if that data is collected from within China. <ref type="bibr" target="#b74">90</ref> The CSL will, however, apply extra-territorially where any person or organisation attempts to breach cybersecurity protocols (eg hack into any computer system in China) regardless of nationality or residency. <ref type="bibr" target="#b75">91</ref> </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Intention and Rationale of Legislation</head><p>The purpose of both the GDPR and the CSL are comparatively similar on a surface level except for one key difference. <ref type="bibr" target="#b76">92</ref> Unlike the CSL, which expressly provides for the requirement of consent in its core principles, the GDPR does not contain this consent requirement in its key principles. <ref type="bibr">93</ref> Although this right is covered elsewhere in the regulation and can be implied in several principles, the absence of its explicit conveyance in the core principles can be reasoned by the intention of the regime. Where the GDPR is concerned with the free flow of commerce and striking the balance between individual rightsexplaining the absence of consent and participation concepts in the core principles, the CSL focuses on heavy regulation on the controller's activities and placing the ultimate decision-making power at the discretion of the authorities. <ref type="bibr">94</ref> Although neither statute articulates specific rationales behind the data transfer restriction, the main legislative purpose is to protect EU citizens' personal information from misuse, particularly when such information leaves the EU territory. <ref type="bibr" target="#b77">95</ref> Opposingly, the CSL's heavy regulatory focus is believed to be essential in the preservation of China's role in the global digital economy and to support its Big Data-driven economy backed up by emerging technologies such as AI. <ref type="bibr">96</ref> While on a surface level, both models appear similar, analyses behind the rationale of the models reveal stark differences in the operative function.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Processing and Sharing of Personal Data</head><p>The GDPR and the PIS Specification have sought to redress the imbalance involved with the process of how personal data is used, whether the information is correct, and the duration of use. Both sets of legislation contain provisions which require Controllers to (subject to certain exceptions): (1) restrict the use of the personal data to only those purpose for which the data subject has been informed; (2) rectify inaccurate personal data; (3) erase personal data when requested to do so (this provision enshrines the principle of the 'right to be forgotten', which has caused Google so many issues) or when the data is no longer needed; (4) provide the personal data to the data subject in a format that can be transferred to another controller and (5) refrain from subjecting data subjects to decisions based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her. <ref type="bibr" target="#b78">97</ref> The only substantive difference between the two sets of legislation is that under the GDPR, there is a distinction between a controller and a data processor (the legislation imposes obligations on both), whereas the PRC laws apply only to the controller, although a third party will be deemed to be a controller if they have 'independent control' over the data. <ref type="bibr">98</ref> When transferring and sharing data to third parties, such as suppliers, retailers, advertisers, and app developers, the GDPR and PRC laws both place restrictions and obligations on the controller to ensure the third party has adequate systems in place to ensure the data is secure. The GDPR provides personal data can be shared if data subjects have been informed of the sharing in a privacy notice and are subject to certain other conditions (eg the establishment of a legal basis for the transfer and the implementation of any further steps required by the GDPR). <ref type="bibr">99</ref> The PRC laws, however, allow for sharing and transfer if it is 'necessary'. <ref type="bibr" target="#b79">100</ref> Although what constitutes 'necessary' is not provided for, necessity presumably occurs if the good or service being provided cannot be provided with it. <ref type="bibr" target="#b80">101</ref> In this instance, the data protection laws in both Europe and China are aligned.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Cross-Border Transfer</head><p>The most controversial difference between the GDPR and PRC laws is the transfer of data out of one jurisdiction. Article 44 of GDPR generally prohibits the transfer of personal data to non-European Economic Area (EEA) recipients outside of the EEA without needing to obtain consent unless: (1) the recipient country is deemed to provide an adequate level of data protection; (2) data exporters adopt 'appropriate safeguards'; or (3) a derogation applies. 102 Furthermore, provided there is a standard contractual clause in the form approved by the European Commission, or authorisation is granted by the controller subject to appropriate conditions to ensure that the transfer is carried out in accordance with the GDPR, cross-border transfer is permissible. Unlike the PRC Data Transfer Laws, these provisions in the GDPR highlight and offer both practical outlets and affirmative mechanisms available to MNCs seeking to transfer data outside.</p><p>In contrast to the GDPR, as mentioned earlier, China imposes onerous obligations on MNCs wishing to transfer data out of China. While possible, the law creates significant pressure and compliance problems for all companies (not just MNCs) wishing to do so. In China, cross-border transfer out of China may only be facilitated if: In China, cross-border transfer out of China may only be facilitated if: (1) the controller notifies the data subject of the purpose, scope, content, and the recipient of the overseas transfer;</p><p>(2) consent is given by the data subject; and (3) the controller undertakes a security assessment to ensure the personal data is safe from cybersecurity risks. <ref type="bibr" target="#b82">103</ref> Where MNCs conduct business in China but have servers outside of the country or use cloud-based storage in another country to store customer data, the problem is relatively acute. <ref type="bibr" target="#b83">104</ref> Due to the logistical difficulties in obtaining consent, some companies, however, have had to set up separate storage facilities in China to comply with PRC Data Transfer Laws. 105</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Enforcement</head><p>A feature consistent with both the GDPR and the CSL is that the two regulations lay down harsh penalties for breach of the law. The GDPR places emphasis on monetary fines, whereby controllers and data processors may be faced with hefty administrative fines up to €20m, or in the case of an undertaking, up to 4 per cent of the total worldwide annual turnover for breach of specific Articles of the Regulation. <ref type="bibr">106</ref> In addition, EU member states may enact their own regulations setting out the penalties that apply to breaches of articles that are not subject to the mentioned fines. <ref type="bibr">107</ref> In contrast, monetary fines are considerably smaller for breach in China and range between RMB 100,000 and 1,000,000 for controllers and RMB 50,000 and 500,000 for responsible persons. <ref type="bibr" target="#b84">108</ref> The CSL, however, imposes a wider range of punishments in addition to fines, including revocation and suspension of business licences, shutdown of company website, confiscation of illegally earned income and persons liable may face imprisonment. 109</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IMPLEMENTATION OF THE CSL IN PRACTICE</head><p>As the CSL came into effect on 1st June, 2017, China has accelerated efforts to facilitate its implementation. This has been achieved by the issuance of a series of implementation regulations and national standards -some of which have been introduced in the Article given earlier.</p><p>Although drafted regulations regarding the 'CII' or 'personal information overseas transfer' have not been finalised, this does not necessarily affect the smooth implementation of the CSL in practice.</p><p>For instance, in 2018, an online article titled '2018, Enforcement Cases of CSL' published on sohu.com by Anzer Media stated that such enforcement cases regarding the CSL in 2018 mainly focused on issues such as the level of cybersecurity protection, personal information protection, online information reviewing and online product and service. <ref type="bibr" target="#b85">110</ref> The said article also combed through relevant enforcement cases in 2018, which included, but not limited to, the following:</p><p>In January 2018, the Ministry of Industry and Information Technology made interviews with Baidu.com, Alipay and Headlines Today regarding infringement of users' privacy by cell phone apps, and requested them to rectify to secure users' right to know and choose.</p><p>In April 2018, a company in Henan Province not only had a security leak which resulted in personal information leaks, but also collected and stored personal information without users' consent, whilst lacking the necessary security measurements to ensure the safety of such personal information as well as failing to keep a relevant web log for no less than six months. In accordance with the CSL, the company's actions resulted in a RMB 50,000 fine, alongside an additional RMB 10,000 fine for the direct person in charge.</p><p>In July 2018, the police cracked down on a personal information infringement case in Shandong Province. Notably, 57 criminal suspects were arrested and 11 companies were involved, including a famous big data company listed on the National Equities Exchange and Quotations. It was reported that the involved enterprises transferred 130 million pieces of personal information per day and the accumulated data was about 4000 GB upon compression. Particularly, three out of the eleven involved companies were in suspicion of unit crime.</p><p>In August 2018, a remote data monitor platform of a company in Henan Province was hacked resulting in various modifications in webpages, due to its defective network security management system and measurements. The said company's inaction resulted in a RMB 80,000 fine, whereas three relevant persons in charge were also fined respectively, in accordance with Article 59.1.</p><p>In addition, there were also many cases concerning the issuance of illegal and unhealthy information online. Collectively, the responsible parties included users who issued the illegal and unhealthy information, as well as online platforms that failed to manage such problematic issuance, were ordered to shut down the problematic account, suspend service to rectify and so on.</p><p>The aforementioned examples are instances of the types of legal risk MNCs face under the current legal regime imposed by the CSL. This involves many aspects, including, but not limited to, establishment and maintenance of cybersecurity protection and management system; collection, storage, use, and overseas transfer of the personal information; and management of company website, app, or other online platforms. The new regulations that operate alongside the CSL lay out the precise instructions on how both Chinese and foreign companies must secure their networks, which could result in switching to Chinese equipment, adapting international strategies, and exposing their intellectual property to the government. Thus, it is necessary for MNCs to take any of the suggested measures given earlier to avoid any unnecessary legal complications.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>COMPLIANCE WITH THE CSL</head><p>MNCs must carefully note the privacy and cybersecurity landscape in China to ensure their business practices are compliant with legal and regulatory requirements. Violation of the CSL can result in fines, disgorgement, website suspensions and business license revocations. <ref type="bibr" target="#b86">111</ref>  For MNCs to be compliant with China's data protection and privacy laws, it is necessary to review and update company privacy policies and contracts, conduct audits of cybersecurity weaknesses, and develop a standard operating procedure in the event of a cybersecurity breach. <ref type="bibr" target="#b90">121</ref> This may also require a thorough and complete understanding of data transfer routes, companies' infrastructure layout and operation mechanisms, daily activities relating to information collection, storage, transmit and process within China. <ref type="bibr" target="#b91">122</ref> e. Provide training cybersecurity and data protection awareness training for employees. <ref type="bibr" target="#b92">123</ref> Delivering data security and privacy protection training for all employees, and enhanced security training for specific employees in key positions in China, will allow the cybersecurity system to effectively and efficiently work while also mitigating the risk of future complications. <ref type="bibr" target="#b94">124</ref> f. Closely follow legislative developments. <ref type="bibr" target="#b95">125</ref> Due to the evolving and unresolved nature of the CSL, many of its implementing regulations, guidelines, and standards are in draft form. <ref type="bibr">126</ref> MNCs affected by the CSL should closely follow and monitor legislative development in China's cybersecurity regime. 127 While some of the requirements of the CSL (such as data localisation and the designation of security personnel) may be reminiscent of the European GDPR the two regulations are vastly different. <ref type="bibr">128</ref> Actions taken to comply with GDPR should not automatically be assumed as compliant with the CSL. 129</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IMPACT OF COVID-19 ON DATA PROTECTION IN CHINA</head><p>To fight against the COVID-19 pandemic, China has used a collection of digital technologies such as artificial intelligence (AI), big data, cloud computing, blockchain, and 5G to curb the spread of the disease. <ref type="bibr" target="#b98">130</ref> Whilst using digitally available data and algorithms for prediction and surveillance has effectively improved the country's efforts in epidemic monitoring, virus tracking, prevention, control and treatment, and resource allocation, it is also equally important to use the collection of this data in a responsible manner that is compliant with data-protection regulations. <ref type="bibr" target="#b99">131</ref> Particularly, the 'large-scale collection and use of mobile data from millions of users -especially call-data records and social-media reports to identify people who have travelled to areas where the disease has spread or tracing and isolating the contacts of infected people -raises numerous privacy and data-protection concerns'. <ref type="bibr" target="#b100">132</ref> In response to personal data protection concerns, the Chinese government has issued supplementary specific cybersecurity and personal information protection notices in connection with the COVID-19 pandemic. On 3rd February, 2020, the National Health Commission of China issued a notice outlining the personal data protection requirements in the context of the prevention and control of COVID-19. <ref type="bibr" target="#b101">133</ref> Furthermore, on 4th February, 2020, the Circular on Ensuring Effective Personal Information Protection and Utilization of Big Data to Support Joint Efforts for Epidemic Prevention and Control ('CAC Circular') was issued by the CAC, which emphasised several general principles for protection of individuals' personal data in the situation of COVID-19. <ref type="bibr" target="#b102">134</ref> The CAC Circular imposes important implications for MNCs operating and handling personal data in China amid the global pandemic. MNCs, particularly technology or Big Data companies, which engage in collecting or processing personal data for the prevention and control of COVID-19, are required to safeguard data and obtain the consent of the relevant data subjects if they wish to use such data for research, market monitoring or the development of new products or services. <ref type="bibr">135</ref> To collect personal data, MNCs must follow the principles of necessity and minimisation and take proper technical and management measures (such as encryption) in place to prevent data breaches. <ref type="bibr">136</ref> Although the CSL provides no exception for consent, the CAC has a willingness to refer to the nonmandatory Personal Data Specifications to accommodate specific scenarios where prior consent may not always be necessary or practically possible. <ref type="bibr">137</ref> With the general public's increasing awareness of data privacy rights in China, Chinese authorities have taken enhanced actions to clamp down on businesses that fail to comply with Chinese data laws and regulations. Therefore, it is imperative that MNCs take serious measures to remain compliant in these uncertain times.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONCLUSION</head><p>Conclusively, over the last two years, China has had a great 'wake up' to data protection and cybersecurity. Where rules have previously been absent, the current legal regime establishes strategic guidelines and directives for cyberspace governance. In light of the rapidly evolving regulatory environment, the law as it currently stands remains ambiguous and is unclear over both its application and the practical steps needed to achieve compliance. Furthermore, the lack of centralised data protection authority infers a great difficultly to keep up with enforcement and the issuance of any legal guidance, especially for foreign companies unfamiliar with the Chinese legal environment. As a result, the commercial impact of the current law makes China a relatively complex jurisdiction to operate from a data protection standpoint. Moreover, the release of each new draft measure creates ambiguous categories applicable to new entities, and additional compliance measures provide an opportunity for administrators to exercise unforeseen juridical control. Under the PRC Laws, MNCs that collect personal data from citizens have stricter obligations in comparison to the GDPR and must develop additional steps or new management systems altogether to remain compliant within the PRC jurisdiction. Where MNCs fail to be compliant with China's data protection laws, they face a wider range of penalties than under the GDPR applicable to both the organisation itself and any individuals within that organisation who may be responsible. While new judicial developments seek to gradually provide clarification of the law (as seen in the outbreak of the COVID-19 pandemic), MNC's operating in China that have thoroughly reviewed their policies, undertaken risk assessments, and have a clear understanding of government priorities will be better prepared to manage the operational and compliance risks associated with the CSL.</p></div>			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">© Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 3 04/08/20 8:34 PM Journal of Data Protection &amp; Privacy Vol. 3, 3 1-18 © Henry Stewart Publications 2398-1679 (2020)</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 4 04/08/20 8:34 PM © Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 5 04/08/20 8:34 PM Journal of Data Protection &amp; Privacy Vol. 3, 3 1-18 © Henry Stewart Publications 2398-1679 (2020)</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 6 04/08/20 8:34 PM © Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 7 04/08/20 8:34 PM Journal of Data Protection &amp; Privacy Vol. 3, 3 1-18 © Henry Stewart Publications 2398-1679 (2020)</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 8 04/08/20 8:34 PM © Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">Journal of DataProtection &amp; Privacy Vol. 3, 3 1-18 © Henry Stewart Publications 2398-1679 (2020)</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 10 04/08/20 8:34 PM © Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 11 04/08/20 9:14 PM Journal of Data Protection &amp; Privacy Vol. 3, 3 1-18 © Henry Stewart Publications 2398-1679 (2020)</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 12 04/08/20 8:34 PM © Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 1304/08/20 8:34 PM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 14 04/08/20 8:34 PM © Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 1504/08/20 8:34 PM</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 16 04/08/20 8:34 PM © Henry Stewart Publications 2398-1679 (2020) Vol. 3, 3 1-18 Journal of Data Protection &amp; Privacy</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 17 04/08/20 8:34 PM Journal of Data Protection &amp; Privacy Vol. 3, 3 1-18 © Henry Stewart Publications 2398-1679 (2020)</note>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot">JDPP0127_LANGFORD.indd 1804/08/20 8:34 PM</note>
+		</body>
+		<back>
+			<div type="annex">
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Developments in China's data protection and privacy regulatory regime</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>AUTHOR'S NOTE</head><p>The author would like to thank Matthew Murphy, Managing Partner, MMLC Group, for his guidance and assistance with this paper.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Developments in China's data protection and privacy regulatory regime</head></div>			</div>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">The future of China’s personal data protection law: challenges and prospects</title>
+		<author>
+			<persName><forename type="first">Yang</forename><surname>Feng</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/10192557.2019.1646015</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Asia Pacific Law Review</title>
+		<title level="j" type="abbrev">Asia Pacific Law Review</title>
+		<idno type="ISSN">1019-2557</idno>
+		<idno type="ISSNe">1875-8444</idno>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="21" />
+			<date type="published" when="2019-08-05" />
+			<publisher>Informa UK Limited</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Feng, Y. (2019) &apos;The future of China&apos;s personal data protection law: Challenges and prospects&apos;, Asia Pacific Law Review, Vol. 27, No. 1, pp. 62-82.</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Hacking into China&apos;s cybersecurity law</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Wake Forest Law Review</title>
+		<imprint>
+			<biblScope unit="volume">53</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="57" to="104" />
+			<date type="published" when="2018" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lee, J. (2018) &apos;Hacking into China&apos;s cybersecurity law&apos;, Wake Forest Law Review, Vol. 53, No. 1, pp. 57-104.</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">62</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid., p. 62.</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<monogr>
+		<title level="m" type="main">China&apos;s cybersecurity law takes effect: what to expect</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Lee ; Sacks</surname></persName>
+		</author>
+		<ptr target="https://www.lawfareblog.com/chinas-cybersecurity-law-takes-effect-what-expect" />
+		<imprint>
+			<date type="published" when="2017-12-27" />
+			<biblScope unit="page">60</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref.2 above</note>
+	<note type="raw_reference">Lee, ref.2 above, p. 60; Sacks, S. (2017) &apos;China&apos;s cybersecurity law takes effect: what to expect&apos;, LAWFARE, available at: https://www.lawfareblog. com/chinas-cybersecurity-law-takes-effect-what- expect (accessed 27th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Cybersecurity Law of the People&apos;s Republic of China (promulgated by the Standing Comm. Nat&apos;l People&apos;s Cong</title>
+		<ptr target="http://en.pkulaw.cn/display.aspx?cgid=4dce14765f4265f1bdfb&amp;lib=law" />
+		<imprint>
+			<date type="published" when="2016-11-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Cybersecurity Law of the People&apos;s Republic of China (promulgated by the Standing Comm. Nat&apos;l People&apos;s Cong., 7th November, 2016, effective 1st June, 2017), available at: http://en.pkulaw.cn/display. aspx?cgid=4dce14765f4265f1bdfb&amp;lib=law (accessed 19th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">China&apos;s cyber initiatives counter international pressure</title>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Strategic Security</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="1" to="16" />
+			<date type="published" when="2016" />
+		</imprint>
+	</monogr>
+	<note>ref. 2 above. Iasiello, E</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 61; Iasiello, E (2016) &apos;China&apos;s cyber initiatives counter international pressure&apos;, Strategic Security, Vol. 10, No. 1, pp. 1-16.</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Feng</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">68</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 1 above</note>
+	<note type="raw_reference">Feng, ref. 1 above, p. 68.</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Decision on Strengthening Online Information Protection (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective</title>
+		<imprint>
+			<date type="published" when="2012-12-28" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Decision on Strengthening Online Information Protection (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective 28th December, 2012);</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<monogr>
+		<title level="m" type="main">); National Standard of Information Security Technology -Personal Information Security Specification (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective 1st May</title>
+		<imprint>
+			<date type="published" when="2013-02-01" />
+		</imprint>
+		<respStmt>
+			<orgName>National Standard of Information Security Technology</orgName>
+		</respStmt>
+	</monogr>
+	<note>Guideline for Personal Information Protection within Information System for Public and Commercial Services (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective. hereinafter PIS Specification</note>
+	<note type="raw_reference">National Standard of Information Security Technology -Guideline for Personal Information Protection within Information System for Public and Commercial Services (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective 1st February, 2013); National Standard of Information Security Technology -Personal Information Security Specification (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective 1st May, 2018) [hereinafter PIS Specification].</note>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">65</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 2 above</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 65.</note>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Law of the People&apos;s Republic of China on the Protection of Consumer Rights and Interests (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective</title>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<idno>ref. 5</idno>
+		<imprint>
+			<date type="published" when="2014-03" />
+		</imprint>
+	</monogr>
+	<note>above; E-Commerce Law of the People&apos;s Republic of China (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective 1st</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above; E-Commerce Law of the People&apos;s Republic of China (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective 1st January, 2019); Law of the People&apos;s Republic of China on the Protection of Consumer Rights and Interests (promulgated by Standing Committee of the Nat&apos;l People&apos;s Cong., effective 15th March, 2014).</note>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<pubPlace>Art</pubPlace>
+		</imprint>
+	</monogr>
+	<note>ref. 5 above, Art 111. 13. Ibid.</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art 111. 13. Ibid., Art 76(5).</note>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<monogr>
+		<title level="m" type="main">PIS Specification, ref</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">PIS Specification, ref. 9 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<monogr>
+		<title level="m" type="main">Overview of China&apos;s Cyber Security Law&apos;, IT Advisory KPMG China</title>
+		<ptr target="https://assets.kpmg/content/dam/kpmg/cn/pdf/en/2017/02/overview-of-cybersecurity-law.pdf" />
+		<imprint>
+			<date type="published" when="2017-12-19" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">KPMG (2017) &apos;Overview of China&apos;s Cyber Security Law&apos;, IT Advisory KPMG China, available at:https://assets.kpmg/content/dam/kpmg/cn/pdf/ en/2017/02/overview-of-cybersecurity-law.pdf (accessed 19th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Art 21, 41, 44. 18. Ibid., Art 41. 19. Ibid., Art 22. 20. Ibid., Art 41. 21. Ibid., Art 44. 22. Ibid</title>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>ref. 5 above. Art 41. 23. Ibid., Art 42.2. 24. Ibid., Art 42.1. 25. Ibid., Art 43. 26. Ibid., Art 45</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art 21, 41, 44. 18. Ibid., Art 41. 19. Ibid., Art 22. 20. Ibid., Art 41. 21. Ibid., Art 44. 22. Ibid., Art 41. 23. Ibid., Art 42.2. 24. Ibid., Art 42.1. 25. Ibid., Art 43. 26. Ibid., Art 45.</note>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Kpmg</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">16</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">KPMG, ref.16 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<title level="m">PRC Cybersecurity Law, ref. 5 above</title>
+				<meeting><address><addrLine>Art</addrLine></address></meeting>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid.; PRC Cybersecurity Law, ref. 5 above, Art 42.</note>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<monogr>
+		<title level="m" type="main">Information Security Technology -Basic Specification for Collecting Personal Information in Mobile Internet Applications (promulgated by App Governance Panel effective</title>
+		<ptr target="https://mp.weixin.qq.com/s/y8EUsg9-vDMMinVuHR2ZEA" />
+		<imprint>
+			<date type="published" when="2019-09-25" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Information Security Technology -Basic Specification for Collecting Personal Information in Mobile Internet Applications (promulgated by App Governance Panel effective 25th September, 2019). Available at: https://mp.weixin.qq.com/s/y8EUsg9- vDMMinVuHR2ZEA;</note>
+</biblStruct>
+
+<biblStruct xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Newsletters/Tech-Data-Telecoms-Media/ China/AnJie-Law-Firm/Draft-rules-on-collectionof-personal-data-by-apps-revised#1</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<ptr target="https://www.internationallawoffice.com/" />
+		<imprint>
+			<date type="published" when="2019-12-23" />
+		</imprint>
+	</monogr>
+	<note>Draft rules on collection of personal data by apps revised&apos;, Anjie Law Firm, International Law Office</note>
+	<note type="raw_reference">Yang, S. and Chen, Y. (2019) &apos;Draft rules on collection of personal data by apps revised&apos;, Anjie Law Firm, International Law Office, available at: https://www.internationallawoffice. com/Newsletters/Tech-Data-Telecoms-Media/ China/AnJie-Law-Firm/Draft-rules-on-collection- of-personal-data-by-apps-revised#1 (accessed 23rd December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Identifying Illegal Collection and Use of Personal Data via Apps (promulgated by Cyberspace Administration of China</title>
+		<ptr target="http://www.cac.gov.cn/2019-12/27/c_1578986455686625.htm(accessed23rd" />
+		<imprint>
+			<date type="published" when="2019-12-30" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Identifying Illegal Collection and Use of Personal Data via Apps (promulgated by Cyberspace Administration of China published 30th December, 2019) [Guidance], available at: http://www.cac.gov.cn/2019- 12/27/c_1578986455686625.htm (accessed 23rd</note>
+</biblStruct>
+
+<biblStruct xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Changes on the horizon in 2020: China and Hong Kong&apos;s proposed reforms to data protection, cyber security and Internet content regulation</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Mcwhirter</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">; Eversheds</forename><surname>Sutherland</surname></persName>
+		</author>
+		<ptr target="https://www.eversheds-sutherland.com/global/en/what/articles/index.page?ArticleID=en/global/Hong-Kong/Changes-on-the-horizon-in-2020" />
+		<imprint>
+			<date type="published" when="2019" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">McWhirter, R. and Cai, J. (2020) &apos;Changes on the horizon in 2020: China and Hong Kong&apos;s proposed reforms to data protection, cyber security and Internet content regulation&apos;, Eversheds Sutherland, available at: https://www.eversheds- sutherland.com/global/en/what/articles/index. page?ArticleID=en/global/Hong-Kong/Changes-on- the-horizon-in-2020 (accessed 23rd December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b23">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>ref. 5 above, Art, 76. 38. Ibid</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art, 76. 38. Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b24">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lee, ref. 2 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b25">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>ref. 5 above, Art 21. 41. Ibid., Art 22</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art 21. 41. Ibid., Art 22.</note>
+</biblStruct>
+
+<biblStruct xml:id="b26">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint>
+			<pubPlace>Art</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid., Art 21;</note>
+</biblStruct>
+
+<biblStruct xml:id="b27">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>ref. 2 above, p. 71. 43. Ibid., Art 28</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 71. 43. Ibid., Art 28.</note>
+</biblStruct>
+
+<biblStruct xml:id="b28">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lee, ref. 2 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b29">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">61</biblScope>
+			<pubPlace>Art</pubPlace>
+		</imprint>
+	</monogr>
+	<note>ref. 5 above</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art, 61.</note>
+</biblStruct>
+
+<biblStruct xml:id="b30">
+	<monogr>
+		<title level="m" type="main">Cyberspace Security Strategy (promulgated by Cyberspace Administration of China published 27th</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Cyberspace Security Strategy (promulgated by Cyberspace Administration of China published 27th</note>
+</biblStruct>
+
+<biblStruct xml:id="b31">
+	<monogr>
+		<title level="m" type="main">Where are we now with data protection law in China?</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bird</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Quah</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2019-09" />
+		</imprint>
+	</monogr>
+	<note>Updated</note>
+	<note type="raw_reference">Bird, R. and Quah, P. (2019) &apos;Where are we now with data protection law in China? (Updated September 2019)&apos;,</note>
+</biblStruct>
+
+<biblStruct xml:id="b32">
+	<monogr>
+		<title level="m" type="main">where-are-wenow-with-data-protection-law-in-china-updated</title>
+		<author>
+			<persName><forename type="first">Deringer</forename><surname>Freshfields Bruckhaus</surname></persName>
+		</author>
+		<ptr target="https://digital.freshfields.com/post/102fqnd/" />
+		<imprint>
+			<date type="published" when="2019-09-24" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Freshfields Bruckhaus Deringer, available at: https:// digital.freshfields.com/post/102fqnd/where-are-we- now-with-data-protection-law-in-china-updated- september-2019 (accessed 24th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b33">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b34">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">73</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 2 above</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 73;</note>
+</biblStruct>
+
+<biblStruct xml:id="b35">
+	<monogr>
+		<title level="m" type="main">Remarks by the President on Securing our Nation&apos;s Cyber Infrastructure</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Obama</surname></persName>
+		</author>
+		<ptr target="https://obamawhitehouse.archives.gov/the-press-office/remarks-president-securing-our-nations-cyber-infrastructure" />
+		<imprint>
+			<date type="published" when="2009-05-29" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Obama, B. (2009) &apos;Remarks by the President on Securing our Nation&apos;s Cyber Infrastructure, 29th May, available at: https:// obamawhitehouse.archives.gov/the-press-office/ remarks-president-securing-our-nations-cyber- infrastructure</note>
+</biblStruct>
+
+<biblStruct xml:id="b36">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">34</biblScope>
+			<biblScope unit="page">38</biblScope>
+			<pubPlace>Art</pubPlace>
+		</imprint>
+	</monogr>
+	<note>ref. 5 above</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art 34, 38.</note>
+</biblStruct>
+
+<biblStruct xml:id="b37">
+	<monogr>
+		<title level="m" type="main">Comply or be prepared to pay: China&apos;s new cybersecurity law</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Wedutenko</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Beasley</surname></persName>
+		</author>
+		<ptr target="https://www.claytonutz.com/knowledge/2017/december/comply-or-be-prepared-to-pay-chinas-new-cybersecurity-law" />
+		<imprint>
+			<date type="published" when="2017-12-24" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wedutenko, A. and Beasley, C. (2017) &apos;Comply or be prepared to pay: China&apos;s new cybersecurity law,&apos; Clayton Utz, available at: https://www.claytonutz. com/knowledge/2017/december/comply-or-be- prepared-to-pay-chinas-new-cybersecurity-law (accessed 24th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b38">
+	<monogr>
+		<title level="m" type="main">Art 23, 35. 52. Measures on Security Review of Network Products and Services (promulgated by Cyberspace Administration of China</title>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<ptr target="http://www.cac.gov.cn/2019-05/24/c_1124532846.htm" />
+		<imprint>
+			<date type="published" when="2017-05-02" />
+		</imprint>
+	</monogr>
+	<note>ref. 5 above. Interim Measures], available at</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art 23, 35. 52. Measures on Security Review of Network Products and Services (promulgated by Cyberspace Administration of China published 2nd May, 2017) [Interim Measures], available at: http://www.cac.gov.cn/2019-05/24/c_ 1124532846.htm (accessed 24th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b39">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">85</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 5 above, Art 23, 35; Lee, ref. 2 above</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art 23, 35; Lee, ref. 2 above, p. 85.</note>
+</biblStruct>
+
+<biblStruct xml:id="b40">
+	<monogr>
+		<title level="m" type="main">China&apos;s Cybersecurity Law</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Chin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Liu</surname></persName>
+		</author>
+		<ptr target="https://www.reedsmith.com/en/perspectives/2018/01/chinas-cybersecurity-law" />
+		<imprint>
+			<date type="published" when="2018-07-22" />
+		</imprint>
+	</monogr>
+	<note>Reed Smith, available at</note>
+	<note type="raw_reference">Chin, M. and Liu,C. (2018) &apos;China&apos;s Cybersecurity Law&apos;, Reed Smith, available at: https://www. reedsmith.com/en/perspectives/2018/01/chinas- cybersecurity-law (accessed 22nd July, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b41">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint>
+		</imprint>
+	</monogr>
+	<note>ref.5 above</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref.5 above, Art 37.</note>
+</biblStruct>
+
+<biblStruct xml:id="b42">
+	<monogr>
+		<title level="m" type="main">Navigating the data compliance challenges in Mainland China: Perspective of retail sector</title>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Deng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dai</surname></persName>
+		</author>
+		<ptr target="https://www.dentons.com/en/insights/alerts/2020/june/22/navigating-the-data-compliance-challenges-in-mainland-china-perspective-of-retail-sector" />
+		<imprint>
+			<date type="published" when="2020-07-22" />
+			<pubPlace>Dentons</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Deng, Z. and Dai, J. (2020) &apos;Navigating the data compliance challenges in Mainland China: Perspective of retail sector&apos;, Dentons, available at: https://www.dentons.com/en/insights/alerts/2020/ june/22/navigating-the-data-compliance-challenges- in-mainland-china-perspective-of-retail-sector (accessed 22nd July, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b43">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">78</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 2 above</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 78.</note>
+</biblStruct>
+
+<biblStruct xml:id="b44">
+	<monogr>
+		<title level="m" type="main">Chinese firm to operate China iCloud accounts</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<ptr target="http://www.bbc.com/news/business-42631386" />
+		<imprint>
+			<date type="published" when="2018-01-28" />
+			<publisher>BBC News</publisher>
+			<biblScope unit="page">80</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid., p. 80; BBC News (2018) &apos;Chinese firm to operate China iCloud accounts&apos;, 10th January, available at: http://www.bbc.com/news/ business-42631386 (accessed 28th December, 2019);</note>
+</biblStruct>
+
+<biblStruct xml:id="b45">
+	<monogr>
+		<title level="m" type="main">Apple&apos;s iCloud service in China will be managed by a data firm started by the government&apos;, QUARTZ</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Horwitz</surname></persName>
+		</author>
+		<ptr target="https://qz.com/1176376" />
+		<imprint>
+			<date type="published" when="2018-01-10" />
+		</imprint>
+	</monogr>
+	<note>/apples-icloud-servicein-china-will-be-managed-by-a-data-firm-started -by-the-government/</note>
+	<note type="raw_reference">Horwitz, J. (2018) &apos;Apple&apos;s iCloud service in China will be managed by a data firm started by the government&apos;, QUARTZ, 10th January, available at: https://qz.com /1176376/apples-icloud-service- in-china-will-be-managed-by-a-data-firm-started -by-the-government/ (accessed 28th December, 2019);</note>
+</biblStruct>
+
+<biblStruct xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Use iCloud in China? Prepare to share your data with a state-run firm</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pham</surname></persName>
+		</author>
+		<ptr target="http://money.cnn.com/2018/01/10/technology/apple-china-icloud/index.html" />
+		<imprint>
+			<date type="published" when="2018-01-11" />
+		</imprint>
+		<respStmt>
+			<orgName>CNN</orgName>
+		</respStmt>
+	</monogr>
+	<note type="raw_reference">Pham, S. (2018) &apos;Use iCloud in China? Prepare to share your data with a state-run firm&apos;, CNN, 11th January, available at: http://money.cnn. com/2018/01/10/technology/apple-china-icloud/ index.html (accessed 28th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b47">
+	<analytic>
+		<title level="a" type="main">In sharp contrast to Apple, Asus bows out of China&apos;s cloud storage market to protect private user data</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Huang</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Epoch Times</title>
+		<imprint>
+			<biblScope unit="page">15</biblScope>
+			<date type="published" when="2018" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid.; Huang, P. (2018) &apos;In sharp contrast to Apple, Asus bows out of China&apos;s cloud storage market to protect private user data&apos;, The Epoch Times, 15th</note>
+</biblStruct>
+
+<biblStruct xml:id="b48">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>February</surname></persName>
+		</author>
+		<ptr target="https://m-news.theepochtimes.com/in-sharp-contrast-to-apple-asus-bows-out-of-chinas-cloud-storage-market-to-protect-private-user-data_2442490.html" />
+		<imprint>
+			<date type="published" when="2019-12-28" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">February, available at: https://m-news.theepochtimes. com/in-sharp-contrast-to-apple-asus-bows-out-of- chinas-cloud-storage-market-to-protect-private- user-data_2442490.html (accessed 28th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b49">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b50">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">81</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid., p. 81;</note>
+</biblStruct>
+
+<biblStruct xml:id="b51">
+	<monogr>
+		<title level="m" type="main">McKinsey Global Institute: China&apos;s Digital Economy A Leading Global Force</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Woetzel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">&amp;</forename><surname>Mckinsey</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Co</surname></persName>
+		</author>
+		<ptr target="https://www.mckinsey.com/~/media/mckinsey/featured%20insights/China/Chinas%20digital%20economy%20A%20leading%20global%20force/MGI-Chinas-digital-economy-A-leading-global-force.ashx" />
+		<imprint>
+			<date type="published" when="2017-01-29" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Woetzel, J. et.al. (2017) &apos;McKinsey Global Institute: China&apos;s Digital Economy A Leading Global Force&apos;, McKinsey &amp; Co, available at: https://www.mckinsey.com/~/media/ mckinsey/featured%20insights/China/Chinas%20 digital%20economy%20A%20leading%20 global%20force/MGI-Chinas-digital-economy-A- leading-global-force.ashx (accessed 29th January, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b52">
+	<analytic>
+		<title level="a" type="main">Art 6; Notice of the General Office of the People&apos;s Bank of China on Issuing the Administrative Measures of the People&apos;s Bank of China for the Protection of Financial Consumers&apos; Rights and Interests</title>
+	</analytic>
+	<monogr>
+		<title level="m">Notice of the People&apos;s Bank of China on Urging Financial Institutions to Further Effectively Protect Clients&apos; Personal Financial Information</title>
+				<imprint>
+			<date type="published" when="2012-11-07" />
+			<biblScope unit="page">33</biblScope>
+		</imprint>
+	</monogr>
+	<note>of the General Office of the People&apos;s Bank of China] (promulgated by Instrumentalities of the State Council, All Banks, People&apos;s Bank of China</note>
+	<note type="raw_reference">59. Notice of the People&apos;s Bank of China on Urging Financial Institutions to Further Effectively Protect Clients&apos; Personal Financial Information [No. 80 (2012) of the People&apos;s Bank of China] (promulgated by Instrumentalities of the State Council, All Banks, People&apos;s Bank of China, 7th November , 2016, effective 23rd March, 2012) Art 6; Notice of the General Office of the People&apos;s Bank of China on Issuing the Administrative Measures of the People&apos;s Bank of China for the Protection of Financial Consumers&apos; Rights and Interests [No. 107 (2013) of the General Office of the People&apos;s Bank of China] (promulgated by Instrumentalities of the State Council, All Banks, People&apos;s Bank of China, 7th November, 2016, effective 23rd March, 2012) Art 33.</note>
+</biblStruct>
+
+<biblStruct xml:id="b53">
+	<analytic>
+		<title level="a" type="main">Art 4; Standards for the Financial and Accounting Work of Insurance Companies, (promulgated by Ministry of Finance</title>
+		<ptr target="http://bxjg.circ.gov.cn/web/site0/tab5168/info4014257.htm" />
+	</analytic>
+	<monogr>
+		<title level="m">Guidelines on Acceptance Inspection for Commencement of Business of Insurance Companies (promulgated by China Insurance Regulatory Commission</title>
+				<imprint>
+			<date type="published" when="2016-01-25" />
+			<biblScope unit="volume">82</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Guidelines on Acceptance Inspection for Commencement of Business of Insurance Companies (promulgated by China Insurance Regulatory Commission, issued 25th January, 2016), available at: http://bxjg.circ. gov.cn/web/site0/tab5168/info4014257.htm, Art 4; Standards for the Financial and Accounting Work of Insurance Companies, (promulgated by Ministry of Finance, 2019) Art 82 (accessed 2nd January, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b54">
+	<monogr>
+		<title level="m" type="main">Regulation on the Administration of Credit Investigation Industry (promulgated by State Council</title>
+		<imprint>
+			<date type="published" when="2013-03-15" />
+		</imprint>
+	</monogr>
+	<note>Art 24</note>
+	<note type="raw_reference">Regulation on the Administration of Credit Investigation Industry (promulgated by State Council, effective 15th March, 2013), Art 24.</note>
+</biblStruct>
+
+<biblStruct xml:id="b55">
+	<analytic>
+		<title level="a" type="main">of the Ministry of Transport of the People&apos;s Republic of China] (promulgated by Instrumentalities of the State Council</title>
+	</analytic>
+	<monogr>
+		<title level="m">Ministry of Transport, issued 22nd October</title>
+				<imprint>
+			<date type="published" when="2018" />
+		</imprint>
+	</monogr>
+	<note>Measures for the Administration of the Real-Name Receipt and Delivery of Mails and Express Mails. Art 6</note>
+	<note type="raw_reference">Measures for the Administration of the Real-Name Receipt and Delivery of Mails and Express Mails [Order No. 24 (2018) of the Ministry of Transport of the People&apos;s Republic of China] (promulgated by Instrumentalities of the State Council, Ministry of Transport, issued 22nd October, 2018). Art 6.</note>
+</biblStruct>
+
+<biblStruct xml:id="b56">
+	<monogr>
+		<title level="m" type="main">Administrative Measures for Population Health Information (for Trial Implementation) (promulgated by National Health and Family Planning Commission</title>
+		<imprint>
+			<date type="published" when="2010" />
+			<pubPlace>Art</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Administrative Measures for Population Health Information (for Trial Implementation) (promulgated by National Health and Family Planning Commission, effective 5th May, 2014), Art 10;</note>
+</biblStruct>
+
+<biblStruct xml:id="b57">
+	<monogr>
+		<title level="m" type="main">National Health and Medical Big Data Standards, Safety and Service Management Measures (promulgated by National Health Commission</title>
+		<imprint>
+			<biblScope unit="page">13</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">National Health and Medical Big Data Standards, Safety and Service Management Measures (promulgated by National Health Commission, effective 13th</note>
+</biblStruct>
+
+<biblStruct xml:id="b58">
+	<monogr>
+		<title level="m" type="main">Art 30; Administrative Regulations on Human Genetic Resources of the People&apos;s Republic of China (promulgated by State Council</title>
+		<author>
+			<persName><surname>September</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2018-07-01" />
+			<pubPlace>Art 7</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">September, 2018), Art 30; Administrative Regulations on Human Genetic Resources of the People&apos;s Republic of China (promulgated by State Council, effective 1st July, 2019), Art 7.</note>
+</biblStruct>
+
+<biblStruct xml:id="b59">
+	<monogr>
+		<title level="m" type="main">State Administration for Industry and Commerce, the General Administration of Quality Supervision, Inspection and Quarantine, and the Cyberspace Administration of China, effective</title>
+		<imprint>
+			<date type="published" when="2016-01-01" />
+			<biblScope unit="page">27</biblScope>
+			<pubPlace>Art</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">State Administration for Industry and Commerce, the General Administration of Quality Supervision, Inspection and Quarantine, and the Cyberspace Administration of China, effective 1st January, 2016), Art. 27.</note>
+</biblStruct>
+
+<biblStruct xml:id="b60">
+	<monogr>
+		<ptr target="http://english.www.gov.cn/policies/latest_releases/2015/12/14/content_281475253904932.htm" />
+		<title level="m">Regulation on Map Management (promulgated by State Council, issued</title>
+				<meeting><address><addrLine>Art</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2015-12-14" />
+			<biblScope unit="volume">34</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Regulation on Map Management (promulgated by State Council, issued 14th December, 2015), available at: http://english.www.gov.cn/policies/latest_ releases/2015/12/14/content_281475253904932. htm, Art 34 (accessed 2nd January, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b61">
+	<analytic>
+		<title level="a" type="main">China: Data localisation, global data review</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Yang</surname></persName>
+		</author>
+		<ptr target="https://globaldatareview.com/insight/handbook/2020/article/china-data-localisation#footnote-008" />
+	</analytic>
+	<monogr>
+		<title level="j">Anjie Law Firm</title>
+		<imprint>
+			<date type="published" when="2019-01-02" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Yang, S. (2019) &apos;China: Data localisation, global data review&apos;, Anjie Law Firm, available at: https:// globaldatareview.com/insight/handbook/2020/ article/china-data-localisation#footnote-008 (accessed 2nd January, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b62">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">82</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 2 above</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 82.</note>
+</biblStruct>
+
+<biblStruct xml:id="b63">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">78</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 2 above</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 78;</note>
+</biblStruct>
+
+<biblStruct xml:id="b64">
+	<monogr>
+		<title level="m" type="main">Data localization laws and their impacton privacy, data security and the global economy</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Cohen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Hall</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Wood</surname></persName>
+		</author>
+		<ptr target="http://search.proquest.com/docview/2111097288/" />
+		<imprint>
+			<date type="published" when="2017-12-29" />
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="page" from="107" to="114" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Cohen, B., Hall, B. and Wood, C. (2017) &apos;Data localization laws and their impacton privacy, data security and the global economy&apos;, Antitrust,Vol. 32, No. 1, pp. 107-114, available at: http://search.proquest.com/docview/2111097288/ (accessed 29th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b65">
+	<monogr>
+		<title level="m" type="main">PIS Specification, ref. 9 above. Art 64. 75. Ibid</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>Art 66</note>
+	<note type="raw_reference">Ibid., PIS Specification, ref. 9 above. Art 64. 75. Ibid., Art 66.</note>
+</biblStruct>
+
+<biblStruct xml:id="b66">
+	<monogr>
+		<title level="m" type="main">Provisions on Internet Information Content Ecological Governance (promulgated by Cyberspace Administration of China effective</title>
+		<author>
+			<persName><forename type="first">Quah</forename><surname>Bird</surname></persName>
+		</author>
+		<idno>ref. 46 above. 77. Ibid. 78</idno>
+		<ptr target="http://www.cac.gov.cn/2019-12/20/c_1578375159509309.htm" />
+		<imprint>
+			<date type="published" when="2020-03-01" />
+			<biblScope unit="volume">20</biblScope>
+			<pubPlace>Art</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bird and Quah, ref. 46 above. 77. Ibid. 78. Provisions on Internet Information Content Ecological Governance (promulgated by Cyberspace Administration of China effective 1st March, 2020) [Provisions], available from: http://www.cac.gov. cn/2019-12/20/c_1578375159509309.htm, Art 20 (accessed 14th March, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b67">
+	<monogr>
+		<title level="m" type="main">Art 5, 6. 80. Ibid</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint>
+			<pubPlace>Art 7</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid., Art 5, 6. 80. Ibid., Art 7.</note>
+</biblStruct>
+
+<biblStruct xml:id="b68">
+	<monogr>
+		<title level="m" type="main">Provisions on the governance of network information content ecology goes into effect in China</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Hunton Andrews Kurth</surname></persName>
+		</author>
+		<ptr target="https://www.huntonprivacyblog.com/2020/03/03/provisions-on-" />
+		<imprint>
+			<date type="published" when="2020-03-15" />
+		</imprint>
+	</monogr>
+	<note>the-governance-of-networkinformation-content-ecology-goes-into-effect-inchina/. McWhirter and Cai, ref. 33 above</note>
+	<note type="raw_reference">Ibid.; Hunton Andrews Kurth. (2020) &apos;Provisions on the governance of network information content ecology goes into effect in China&apos;, available at: https://www.huntonprivacyblog.com/2020/03/03/ provisions-on-the-governance-of-network- information-content-ecology-goes-into-effect-in- china/ (accessed 15th March, 2020); McWhirter and Cai, ref. 33 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b69">
+	<monogr>
+		<title level="m" type="main">83. Ibid; McWhirter and Cai, ref</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">33</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid. 83. Ibid; McWhirter and Cai, ref. 33 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b70">
+	<analytic>
+		<title level="a" type="main">on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation</title>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<idno>OJ 2016 L 119/1</idno>
+	</analytic>
+	<monogr>
+		<title level="m">ref. 5 above; Regulation (EU) 2016/679 of the European Parliament</title>
+				<imprint>
+			<date type="published" when="2016-04-27" />
+		</imprint>
+	</monogr>
+	<note>Hereinafter GDPR.] 85. Ibid</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above; Regulation (EU) 2016/679 of the European Parliament and of the Council of 27th April, 2016, on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation), OJ 2016 L 119/1. [Hereinafter GDPR.] 85. Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b71">
+	<monogr>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<ptr target="https://edpb.europa.eu/sites/edpb/files/files/file1/edpb_guidelines_3_2018_territorial_scope_en.pdf" />
+		<title level="m">Guidelines 3/2018 on the territorial scope of the GDPR (Article 3), adopted on 16th November</title>
+				<imprint>
+			<publisher>European Data Protection Board</publisher>
+			<date type="published" when="2018-04-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid.; Guidelines 3/2018 on the territorial scope of the GDPR (Article 3), adopted on 16th November, 2018, European Data Protection Board, available at: https://edpb.europa.eu/sites/edpb/files/files/file1/ edpb_guidelines_3_2018_territorial_scope_en.pdf (accessed 7th April, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b72">
+	<monogr>
+		<title level="m" type="main">Personal data protection in the EU and China -A comparative analysis</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">&amp;</forename><surname>Clyde</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Co</surname></persName>
+		</author>
+		<ptr target="https://www.clydeco.com/insight/article/personal-data-protection-in-the-eu-and-china" />
+		<imprint>
+			<date type="published" when="2018-04-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bell, R. (2018) &apos;Personal data protection in the EU and China -A comparative analysis&apos;, Clyde &amp; Co, available at: https://www.clydeco.com/insight/ article/personal-data-protection-in-the-eu-and-china (accessed 7th April, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b73">
+	<monogr>
+		<title level="m">PRC Cybersecurity Law, ref. 5 above</title>
+				<imprint/>
+	</monogr>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b74">
+	<monogr>
+		<title level="m" type="main">Above n 77</title>
+		<imprint>
+			<biblScope unit="page">84</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Above n 77, n 84.</note>
+</biblStruct>
+
+<biblStruct xml:id="b75">
+	<monogr>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<title level="m">PRC Cybersecurity Law, ref. 5 above</title>
+				<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.; PRC Cybersecurity Law, ref. 5 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b76">
+	<monogr>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<title level="m">PRC Cybersecurity Law, ref. 5 above</title>
+				<imprint/>
+	</monogr>
+	<note>Art 1; ref. 77 above, GDPR Art 5, 6; Bell, ref. 88 above</note>
+	<note type="raw_reference">Ibid.; PRC Cybersecurity Law, ref. 5 above, Art 1; ref. 77 above, GDPR Art 5, 6; Bell, ref. 88 above.</note>
+</biblStruct>
+
+<biblStruct xml:id="b77">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Bell</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note>ref. 88 above, GDPR Art 5, 6. 96. Ibid</note>
+	<note type="raw_reference">Bell, ref. 88 above, GDPR Art 5, 6. 96. Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b78">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Bell</surname></persName>
+		</author>
+		<idno>ref. 88 above. 98</idno>
+		<imprint/>
+	</monogr>
+	<note>Ibid</note>
+	<note type="raw_reference">Bell, ref. 88 above. 98. Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b79">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint>
+		</imprint>
+	</monogr>
+	<note>ref. 5 above</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref. 5 above, Art 41.</note>
+</biblStruct>
+
+<biblStruct xml:id="b80">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Bell</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="volume">88</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bell, ref. 88 above;</note>
+</biblStruct>
+
+<biblStruct xml:id="b81">
+	<analytic>
+		<title/>
+		<author>
+			<persName><surname>Lee</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">GDPR Art</title>
+		<imprint>
+			<biblScope unit="volume">45</biblScope>
+			<biblScope unit="page">49</biblScope>
+		</imprint>
+	</monogr>
+	<note>ref. 2 above, p. 73. 102. Ref. 77 above</note>
+	<note type="raw_reference">Lee, ref. 2 above, p. 73. 102. Ref. 77 above, GDPR Art 45, 46, 49.</note>
+</biblStruct>
+
+<biblStruct xml:id="b82">
+	<analytic>
+		<title level="a" type="main">Art 37; Guidelines for Security Assessment of Cross-Border Transfer of Personal Information and Important Data (promulgated by Cyberspace Administration of China effective</title>
+		<author>
+			<persName><surname>Bell</surname></persName>
+		</author>
+		<idno>ref. 88</idno>
+	</analytic>
+	<monogr>
+		<title level="m">above; PRC Cybersecurity Law, ref. 5 above</title>
+				<meeting><address><addrLine>Art</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2017-04-11" />
+			<biblScope unit="page">17</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bell, ref. 88 above; PRC Cybersecurity Law, ref. 5 above, Art 37; Guidelines for Security Assessment of Cross-Border Transfer of Personal Information and Important Data (promulgated by Cyberspace Administration of China effective 11th April, 2017), Art. 17.</note>
+</biblStruct>
+
+<biblStruct xml:id="b83">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Bell</surname></persName>
+		</author>
+		<idno>ref. 88 above. 105</idno>
+		<imprint/>
+	</monogr>
+	<note>Ibid</note>
+	<note type="raw_reference">Bell, ref. 88 above. 105. Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b84">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Prc Cybersecurity Law</surname></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page" from="57" to="66" />
+		</imprint>
+	</monogr>
+	<note>ref.5 above</note>
+	<note type="raw_reference">PRC Cybersecurity Law, ref.5 above, Chapter VI. 109. Ibid, Chapter VI, Art 57-66.</note>
+</biblStruct>
+
+<biblStruct xml:id="b85">
+	<analytic>
+		<title level="a" type="main">Enforcement Cases of CSL</title>
+		<author>
+			<persName><forename type="first">Su</forename><surname>Liu</surname></persName>
+		</author>
+		<ptr target="https://www.sohu.com/a/289566721_99944114" />
+	</analytic>
+	<monogr>
+		<title level="m">Anzer Media</title>
+				<imprint>
+			<date type="published" when="2018" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Su Liu, (2019), 2018, &apos;Enforcement Cases of CSL&apos;, Anzer Media, available at: https://www.sohu. com/a/289566721_99944114</note>
+</biblStruct>
+
+<biblStruct xml:id="b86">
+	<monogr>
+		<title level="m" type="main">Article 66 Cybersecurity Law of the People&apos;s Republic of China (promulgated by the Standing Comm. Nat&apos;l People&apos;s Cong</title>
+		<imprint>
+			<date type="published" when="2016-11-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Article 66 Cybersecurity Law of the People&apos;s Republic of China (promulgated by the Standing Comm. Nat&apos;l People&apos;s Cong., 7th November, 2016, effective 1st</note>
+</biblStruct>
+
+<biblStruct xml:id="b87">
+	<analytic>
+		<title level="a" type="main">Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lable</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Brez</surname></persName>
+		</author>
+		<ptr target="https://www.law.com/newyorklawjournal/2018/02/23/challenges-and-advice-for-multinational-companies-in-complying-with-chinese-cybersecurity-law/?slreturn=20200621221549" />
+	</analytic>
+	<monogr>
+		<title level="j">New York Law Journal</title>
+		<imprint>
+			<date type="published" when="2018-12-29" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lable, C. Wu, J. and Brez, Z. (2018) &apos;Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law&apos;, New York Law Journal, available at: https:// www.law.com/newyorklawjournal/2018/02/23/ challenges-and-advice-for-multinational-companies- in-complying-with-chinese-cybersecurity- law/?slreturn=20200621221549 (accessed 29th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b88">
+	<analytic>
+		<title level="a" type="main">Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lable</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Brez</surname></persName>
+		</author>
+		<ptr target="https://www.law.com/newyorklawjournal/2018/02/23/challenges-and-advice-for-multinational-companies-in-complying-with-chinese-cybersecurity-law/?slreturn=20200621221549" />
+	</analytic>
+	<monogr>
+		<title level="j">New York Law Journal</title>
+		<imprint>
+			<date type="published" when="2018-12-29" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lable, C. Wu, J. and Brez, Z. (2018) &apos;Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law&apos;, New York Law Journal, available at: https:// www.law.com/newyorklawjournal/2018/02/23/ challenges-and-advice-for-multinational-companies- in-complying-with-chinese-cybersecurity- law/?slreturn=20200621221549 (accessed 29th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b89">
+	<monogr>
+		<title level="m" type="main">Personal data protection in the EU and China -A comparative analysis</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">&amp;</forename><surname>Clyde</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Co</surname></persName>
+		</author>
+		<ptr target="https://www.clydeco.com/insight/article/personal-data-protection-in-the-eu-and-china" />
+		<imprint>
+			<date type="published" when="2018-04-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid; Bell, R. (2018) &apos;Personal data protection in the EU and China -A comparative analysis&apos;, Clyde &amp; Co, available at: https://www.clydeco.com/insight/ article/personal-data-protection-in-the-eu-and-china (accessed 7th April, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b90">
+	<analytic>
+		<title level="a" type="main">Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lable</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Brez</surname></persName>
+		</author>
+		<ptr target="https://www.law.com/newyorklawjournal/2018/02/23/challenges-and-advice-for-multinational-companies-in-complying-with-chinese-cybersecurity-law/?slreturn=20200621221549" />
+	</analytic>
+	<monogr>
+		<title level="j">New York Law Journal</title>
+		<imprint>
+			<date type="published" when="2018-12-29" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lable, C. Wu, J. and Brez, Z. (2018) &apos;Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law&apos;, New York Law Journal, available at: https:// www.law.com/newyorklawjournal/2018/02/23/ challenges-and-advice-for-multinational-companies- in-complying-with-chinese-cybersecurity- law/?slreturn=20200621221549 (accessed 29th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b91">
+	<monogr>
+		<title level="m" type="main">A Brief Introduction to China&apos;s cybersecurity law&apos;, King &amp; Wood Mallesons, available at: HYPERLINK</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Fu</surname></persName>
+		</author>
+		<ptr target="https://www.chinalawinsight.com/2017/06/articles/corporate-ma/a-brief-introduction-to-chinas-cybersecurity-law/#page=1" />
+		<imprint>
+			<date type="published" when="2017-12" />
+			<biblScope unit="page">29</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lou, X. and Fu, G. (2017) &apos;A Brief Introduction to China&apos;s cybersecurity law&apos;, King &amp; Wood Mallesons, available at: HYPERLINK &quot;https://www. chinalawinsight.com/2017/06/articles/corporate- ma/a-brief-introduction-to-chinas-cybersecurity- law/&quot; \l &quot;page=1&quot; https://www.chinalawinsight. com/2017/06/articles/corporate-ma/a-brief- introduction-to-chinas-cybersecurity-law/#page=1 (accessed 29 December 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b92">
+	<analytic>
+		<title level="a" type="main">Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lable</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Brez</surname></persName>
+		</author>
+		<ptr target="https://www.law.com/newyorklawjournal/2018/02/23/challenges-and-advice-for-multinational-companies-in-complying-with-chinese-cybersecurity-law/?slreturn=20200621221549(accessed29th" />
+	</analytic>
+	<monogr>
+		<title level="j">New York Law Journal</title>
+		<imprint>
+			<date type="published" when="2018" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lable, C. Wu, J. and Brez, Z. (2018) &apos;Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law&apos;, New York Law Journal, available at: https:// www.law.com/newyorklawjournal/2018/02/23/ challenges-and-advice-for-multinational-companies- in-complying-with-chinese-cybersecurity- law/?slreturn=20200621221549 (accessed 29th</note>
+</biblStruct>
+
+<biblStruct xml:id="b93">
+	<monogr>
+		<title level="m" type="main">Personal data protection in the EU and China -A comparative analysis</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">&amp;</forename><surname>Clyde</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Co</surname></persName>
+		</author>
+		<ptr target="https://www.clydeco.com/insight/article/personal-data-protection-in-the-eu-and-china" />
+		<imprint>
+			<date type="published" when="2018-04-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bell, R. (2018) &apos;Personal data protection in the EU and China -A comparative analysis&apos;, Clyde &amp; Co, available at: https://www. clydeco.com/insight/ article/personal-data-protection- in-the-eu-and-china (accessed 7th April, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b94">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b95">
+	<analytic>
+		<title level="a" type="main">Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Lable</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Brez</surname></persName>
+		</author>
+		<ptr target="https://www.law.com/newyorklawjournal/2018/02/23/challenges-and-advice-for-multinational-companies-in-complying-with-chinese-cybersecurity-law/?slreturn=20200621221549" />
+	</analytic>
+	<monogr>
+		<title level="j">New York Law Journal</title>
+		<imprint>
+			<date type="published" when="2018-12-29" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lable, C. Wu, J. and Brez, Z. (2018) &apos;Challenges and Advice for Multinational Companies in Complying With Chinese Cybersecurity Law&apos;, New York Law Journal, available at: https:// www.law.com/newyorklawjournal/2018/02/23/ challenges-and-advice-for-multinational-companies- in-complying-with-chinese-cybersecurity- law/?slreturn=20200621221549 (accessed 29th December, 2019).</note>
+</biblStruct>
+
+<biblStruct xml:id="b96">
+	<monogr>
+		<title level="m" type="main">Personal data protection in the EU and China -A comparative analysis</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Bell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">&amp;</forename><surname>Clyde</surname></persName>
+		</author>
+		<author>
+			<persName><surname>Co</surname></persName>
+		</author>
+		<ptr target="https://www.clydeco.com/insight/article/personal-data-protection-in-the-eu-and-china" />
+		<imprint>
+			<date type="published" when="2018-04-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bell, R. (2018) &apos;Personal data protection in the EU and China -A comparative analysis&apos;, Clyde &amp; Co, available at: https://www.clydeco.com/insight/ article/personal-data-protection-in-the-eu-and-china (accessed 7th April, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b97">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b98">
+	<analytic>
+		<title level="a" type="main">How next-generation information technologies tackled COVID-19 in China</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Qi</surname></persName>
+		</author>
+		<ptr target="https://www.weforum.org/agenda/2020/04/how-next-generation-information-technologies-tackled-covid-19-in-china" />
+	</analytic>
+	<monogr>
+		<title level="j">World Economic Forum</title>
+		<imprint>
+			<date type="published" when="2020-07" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Qi, X.(2020) &apos;How next-generation information technologies tackled COVID-19 in China&apos;, World Economic Forum, available at: https:// www.weforum.org/agenda/2020/04/how-next- generation-information-technologies-tackled-covid- 19-in-china/ (accessed 21 July 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b99">
+	<monogr>
+		<title/>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Ibid.</note>
+</biblStruct>
+
+<biblStruct xml:id="b100">
+	<analytic>
+		<title level="a" type="main">On the responsible use of digital data to tackle the COVID-19 pandemic&apos;</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Ienca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Vayena</surname></persName>
+		</author>
+		<idno type="DOI">10.1038/s41591-020-0832-5</idno>
+		<ptr target="https://doi.org/10.1038/s41591-020-0832-5" />
+	</analytic>
+	<monogr>
+		<title level="j">Nature Medicine</title>
+		<imprint>
+			<biblScope unit="volume">26</biblScope>
+			<biblScope unit="page" from="463" to="464" />
+			<date type="published" when="2020" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ienca, M., Vayena, E. (2020) &apos;On the responsible use of digital data to tackle the COVID-19 pandemic&apos;. Nature Medicine 26, 463-464 (2020). https://doi. org/10.1038/s41591-020-0832-5</note>
+</biblStruct>
+
+<biblStruct xml:id="b101">
+	<monogr>
+		<title level="m" type="main">Personal data protection in the time of coronavirus (Covid-19)</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ci</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Yao</surname></persName>
+		</author>
+		<ptr target="https://www.dataprotectionreport.com/2020/02/personal-data-protection-in-the-time-of-coronavirus-covid-19/" />
+		<imprint>
+			<date type="published" when="2020-04-09" />
+			<pubPlace>Norton Rose Fulbright</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ci, B. and Yao, B. (2020) &apos;Personal data protection in the time of coronavirus (Covid-19)&apos;, Norton Rose Fulbright, available at: https://www. dataprotectionreport.com/2020/02/personal-data- protection-in-the-time-of-coronavirus-covid-19/ (accessed 9th April, 2020).</note>
+</biblStruct>
+
+<biblStruct xml:id="b102">
+	<monogr>
+		<title level="m" type="main">Circular on Ensuring Effective Personal Information Protection and Utilization of Big Data to Support Joint Efforts for Epidemic Prevention and Control (promulgated by Cyberspace Administration of China effective</title>
+		<author>
+			<persName><surname>Ibid</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2020-02-04" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ibid.; Circular on Ensuring Effective Personal Information Protection and Utilization of Big Data to Support Joint Efforts for Epidemic Prevention and Control (promulgated by Cyberspace Administration of China effective 4th February, 2020).</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

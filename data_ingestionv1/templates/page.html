@@ -43,7 +43,6 @@
 <style>
 
 body {
-	background: url('../static/back.jpg');
 	background-repeat: no-repeat;
 	background-color: #cccccc;
 	background-size: cover;
@@ -181,6 +180,14 @@ h1 {
 							<input style="margin-top:1%" type="radio" name="funding" value="Present" {% if Funding %}checked{% endif %}><label style="margin-left:2%" for="Present" >Present</label>
 							<input style="margin-top:1%;margin-left:5%" type="radio" name="funding" value="Absent"  {% if not Funding %}checked{% endif %}> <label style="margin-left:2%" for="Absent">Absent </label>
 						</div>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">MESSAGE (if any)</label>
+						<textarea class="form-control col-sm-5" name="message" rows="4" style="resize:none;margin-top:1%;margin-right:12%;border-radius:5px;" ></textarea>
+						
+						<input type="hidden" name="word_count" value={{Word_Count}}>
+						<input type="hidden" name="unique_id" value={{Ref_ID}}>
+						<textarea name="content_text" style="display:none;">{{Content_Text}}</textarea>
+						<!-- <input type="hidden" name="content_text" value={{Content_Text}}> -->
 						
 						<input type="submit" style="" name="button"  class="btn btn-dark mt-2 mb-2"  onsubmit="$('#img').show();" value="SUBMIT" {{disable}}>
 

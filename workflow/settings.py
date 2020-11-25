@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'data_ingestion',
     'data_ingestionv1',
+    'assessment',
 ]
 
 MIDDLEWARE = [
