@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:space="preserve" xmlns="http://www.tei-c.org/ns/1.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.tei-c.org/ns/1.0 /home/lopez/grobid/grobid-home/schemas/xsd/Grobid.xsd"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Reasoning about Unstructured Data De-Identification</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher/>
+				<availability status="unknown"><licence/></availability>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Patricia</forename><surname>Thaine</surname></persName>
+							<email>pthaine@cs.toronto.edu</email>
+							<affiliation key="aff0">
+								<note type="raw_affiliation">University of Toronto</note>
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+							<affiliation key="aff1">
+								<note type="raw_affiliation">the University of Toronto&apos;s Computational Linguistics Lab, the University of Toronto&apos;s Department of Linguistics, and the Public Health Agency of Canada.</note>
+								<orgName type="laboratory">the University of Toronto&apos;s Computational Linguistics Lab, the University of Toronto&apos;s Department of Linguistics, and the Public Health Agency of Canada</orgName>
+							</affiliation>
+							<affiliation key="aff2">
+								<note type="raw_affiliation">2117-35 Charles St W, Toronto, ON, M4Y 1R6</note>
+								<address>
+									<addrLine>2117-35 Charles St W</addrLine>
+									<postCode>M4Y 1R6</postCode>
+									<settlement>Toronto</settlement>
+									<region>ON</region>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Gerald</forename><surname>Penn</surname></persName>
+							<email>gpenn@cs.toronto.edu</email>
+							<affiliation key="aff0">
+								<note type="raw_affiliation">University of Toronto</note>
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+							<affiliation key="aff3">
+								<note type="raw_affiliation">the University of Toronto</note>
+								<orgName type="institution">University of Toronto</orgName>
+							</affiliation>
+						</author>
+						<title level="a" type="main">Reasoning about Unstructured Data De-Identification</title>
+					</analytic>
+					<monogr>
+						<imprint>
+							<date/>
+						</imprint>
+					</monogr>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.6.2-SNAPSHOT" ident="GROBID" when="2020-12-03T05:58+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>anonymization</term>
+					<term>de-identification</term>
+					<term>authorship attribution</term>
+					<term>author profiling</term>
+					<term>unstructured data</term>
+					<term>risk</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>is a Computer Science PhD Candidate at the University of Toronto and a Postgraduate Affiliate at the Vector Institute doing research on privacy-preserving natural language processing, with a focus on applied cryptography. Her research interests also include computational methods for lost language decipherment. She is a recipient of the NSERC Postgraduate Scholarship, the RBC Graduate Fellowship, the Beatrice "Trixie" Worsley Graduate Scholarship in Computer Science, and the Ontario Graduate Scholarship. She has eight years of research and software development experience, including at the McGill Language Development Lab,</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>INTRODUCTION</head><p>When it comes to developing privacy-preserving tools, there is no one-size-fits-all solution. Every scenario requires careful consideration of the kind of privacy guarantees one wants to make and the kinds of task one wants to achieve. The balance between privacy and utility must be weighed on a case-by-case basis to determine what kind of technology or combination of technologies are best to adapt to privacy legislation requirements, user expectations, employee trust, and data security guarantees. Combining these considerations with Artificial Intelligence (AI) is tricky, as privacy-preserving AI is a fairly new sub-field. We discuss some of the current techniques available to preserve privacy in natural language processing tasks, expand on data de-identification as a technique and the controversies it has faced, and finally explore how to reason about data de-identification in the case of unstructured data, as opposed to its more common application to structured (esp. medical) datasets.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>PRIVACY ENHANCING TECHNOLOGIES</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Homomorphic Encryption</head><p>Homomorphic encryption allows for computations to be performed directly on encrypted data, without needing to decrypt it. One scenario to which homomorphic encryption is ideally suited is when there are computations that must be performed on the cloud which cannot be performed on-device, usually because of resource scarcity, such as low memory or compute power. Alternatively, one might want to keep documents in the cloud and ensure that no one but the owner of the documents can ever search through or decrypt them. While many homomorphic encryption schemes are quantum-safe and can be combined with private information retrieval algorithms to ensure maximal privacy for the data owner, they do have limitations in terms of higher computational cost, availability of information for debugging, and easy information sharing.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Secure Multiparty Computation</head><p>Secure Multiparty Computation (MPC) allows for two or more parties to collaborate on computing a result. Neither should know the input of the other, but all parties should know the outcome of the computation. A great example of MPC in practice is <ref type="bibr" target="#b1">[2]</ref> where the researchers made it possible to access genomic data from different hospitals in order to make genomic diagnoses. MPC is often combined with homomorphic encryption in order to improve communication costs. One major limitation of MPC is the fact that changing the algorithm sometimes requires changing the entire circuit underlying the cryptographic protocol.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Differential Privacy</head><p>Differential privacy <ref type="bibr" target="#b2">[3]</ref> allows for generalizations to be made about a population without revealing information that is unique to an individual within that populationbe it when querying a dataset or when training a statistical algorithm such as a neural network <ref type="bibr" target="#b3">[4]</ref>. It excels at protecting the privacy of a neural network's training data, but it is not effective at, say, extracting data in order to debug software or at making very specific inferences about an individual or about uncommon data points.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Data De-identification</head><p>Data de-identification has often been used to make datasets public to either researchers or the general population. The goal behind data de-identification is often not merely to comply with the removal of personally identifiable information, but also to hide the relationship between individuals and their sensitive data (e.g., disease), while allowing enough information (e.g., state and age range) to be available so that some usable conclusions might be drawn about a population <ref type="bibr" target="#b4">[5]</ref>. Guarantees that can be made about de-identified data are based on empirical analysis and the statistical information available about relevant populations.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MAKING SENSE OF IT ALL</head><p>1000 to 3000 author tasks might seem large scale, but these numbers come nowhere close to the over 4.4 billion Internet users (statistic from January 2019 <ref type="bibr">[19]</ref>). So the question remains: if we were to remove all personal identifiers and quasi-identifiers from text before they are posted online, including user IP addresses, email addresses, names, locations, etc., how would that affect the likelihood that a text might be traced back to an author if one were to conduct a stylistic analysis thereof.</p><p>We show the results of these calculations in Table <ref type="table">1</ref>.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>Language # speakers on the Internet Error!</head><p>Bookmark not defined. The prospect of accurately identifying 1,38 billion people is rather disconcerting. But now let us look at these impressive numbers in context. Suppose WhatsApp were to profile its users using only stylistic information about their messages. How much would that narrow down the potential author of a message? Table <ref type="table" target="#tab_1">2</ref>: Estimated number of WhatsApp users that would be correctly profiled. Note that we assume same proportion of women ( ) as reported for entire country.</p><p>Those fairly high author profiling accuracies suddenly seem less threatening. Making sense of how authorship attribution accuracies might generalize is a little trickier. We would need more information about how the task accuracy decreases as the number of authors increases while the amount of text to train with remains steady. Though close to doing so, <ref type="bibr">[11]</ref> does not give us that information.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>MEASURING RISK</head><p>Calculating a re-identification risk is a much more complicated task than calculating the likelihood that a user has been correctly profiled on all fronts. For one, a risk score should be based on the number of users that satisfy each possible profile combination. In an extreme case, suppose that there were only one Internet user. No matter their profile, we know with certainty that they are the author of the any message we are trying to attribute. Now suppose we have a total of two users, whose demographic information we know and whose messages we are trying to link back to one of them through author profiling.</p><p>Scenario 1 (same gender, same language variety): Risk of attributing a message to the correct author using gender profiling techniques: 82.3%</p><p>This scoring system can be combined with information about the likelihood of an author of a message being identified correctly by author profiling tools. For this purpose, we introduce the concept of distinctive features, which will denote features which make one entry distinctive from others in a dataset. For example, if an app has four users; namely three male speakers of Australian English (M, AE) and one female speaker of Australian English (F, AE), then the dataset containing user profiles has one distinctive feature (gender). These features can be independent (like gender and language variety, as can be seen from the marginal distributions in Table <ref type="table">3</ref>) or dependent. In general, the author profiling features may be dependent and of varying accuracies relative to their outcomes. We can then compute marginal distributions of accuracy for , over each of its subvectors as defined by selection matrices, = { 1 , 2 , … , }, as follows:</p><formula xml:id="formula_0">( ) = ∑ ( 1 1 , 2 2 , … , ) : ∉ .</formula><p>We write ∉ exactly when does not select the i th profiling feature. We can denote the equivalence classes over the author profiling features selected by as and the size of the smallest of those equivalence classes as .</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>CONCLUSION</head><p>We discussed some of techniques available to preserve privacy in natural language processing tasks, expanded on data de-identification as a technique and the controversies it has faced, and explored data deidentification when used on unstructured data as opposed to structured datasets. As a result of our exploration, we proposed a risk score specifically meant for calculating the probability of a user being identified given an author profiling analysis. We hope this risk score can assist experts in determining the re-identification risk of unstructured documents. We expect that it can be enhanced with notions borrowed from Bayes-Optimal Privacy, ℓ-diversity, and -closeness.</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>User 1 :</head><label>1</label><figDesc>(Male, Canadian English) User 2: (Male, Canadian English) Risk of attributing a message to the correct author, considering that author profiling techniques are useless here: 50% Scenario 2 (different gender, same language variety): User 1: (Male, Canadian English) User 2: (Female, Canadian English)</figDesc></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" type="table" xml:id="tab_1"><head>Table 2</head><label>2</label><figDesc>is based on the number of WhatsApp users per country (September, 2019) [21].</figDesc><table><row><cell cols="2">Country Number of</cell><cell># correctly</cell><cell># women within</cell><cell># men within correctly</cell></row><row><cell></cell><cell>Users</cell><cell>identified:</cell><cell>correctly</cell><cell cols="2">identified group (assuming</cell></row><row><cell></cell><cell>(approx.) Error!</cell><cell>language variety</cell><cell>identified group</cell><cell>same proportion of men</cell></row><row><cell></cell><cell>Bookmark not</cell><cell>&amp; gender</cell><cell>( × × × )</cell><cell cols="2">( ) as reported for entire</cell></row><row><cell></cell><cell>defined. ( )</cell><cell>( × × )</cell><cell></cell><cell>country) ( × × ×</cell><cell>)</cell></row><row><cell>Brazil</cell><cell>99,000,000</cell><cell>82,061,100</cell><cell>42,425,589 [22]</cell><cell>39,635,511 [22]</cell></row><row><cell>United</cell><cell>68,100,000</cell><cell>50,332,710</cell><cell>24,663,028 [23]</cell><cell>25,669,682 [23]</cell></row><row><cell>States</cell><cell></cell><cell></cell><cell></cell><cell></cell></row><row><cell>Mexico</cell><cell>57,200,000</cell><cell>45,782,880</cell><cell>23,599,423 [24]</cell><cell>22,183,457 [24]</cell></row></table></figure>
+		</body>
+		<back>
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Privacy-Preserving Speaker Authentication</title>
+		<author>
+			<persName><forename type="first">Manas</forename><surname>Pathak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jose</forename><surname>Portelo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bhiksha</forename><surname>Raj</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Isabel</forename><surname>Trancoso</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-3-642-33383-5_1</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Lecture Notes in Computer Science</title>
+				<editor>
+			<persName><forename type="first">D</forename><surname>Gollmann</surname></persName>
+			<persName><forename type="first">F</forename><forename type="middle">C</forename><surname>Freiling</surname></persName>
+		</editor>
+		<meeting><address><addrLine>Berlin, Heidelberg; Berlin Heidelberg</addrLine></address></meeting>
+		<imprint>
+			<publisher>Springer Berlin Heidelberg</publisher>
+			<date type="published" when="2012" />
+			<biblScope unit="volume">7483</biblScope>
+			<biblScope unit="page" from="1" to="22" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pathak, M., Portelo, J., Raj, B. and Trancoso, I. &quot;Privacy-Preserving Speaker Authentication,&quot; in Information Security, vol. 7483, D. Gollmann and F. C. Freiling, Eds. Berlin, Heidelberg: Springer Berlin Heidelberg, 2012, pp. 1-22.</note>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Deriving genomic diagnoses without revealing patient genomes</title>
+		<author>
+			<persName><forename type="first">Karthik</forename><forename type="middle">A</forename><surname>Jagadeesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">David</forename><forename type="middle">J</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Johannes</forename><forename type="middle">A</forename><surname>Birgmeier</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Dan</forename><surname>Boneh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Gill</forename><surname>Bejerano</surname></persName>
+		</author>
+		<idno type="DOI">10.1126/science.aam9710</idno>
+		<idno type="PMID">28818945</idno>
+		<ptr type="open-access" target="https://science.sciencemag.org/content/sci/357/6352/692.full.pdf" />
+	</analytic>
+	<monogr>
+		<title level="j">Science</title>
+		<title level="j" type="abbrev">Science</title>
+		<idno type="ISSN">0036-8075</idno>
+		<idno type="ISSNe">1095-9203</idno>
+		<imprint>
+			<biblScope unit="volume">357</biblScope>
+			<biblScope unit="issue">6352</biblScope>
+			<biblScope unit="page" from="692" to="695" />
+			<date type="published" when="2017-08-17" />
+			<publisher>American Association for the Advancement of Science (AAAS)</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Jagadeesh, K. A., Wu, D. J., Birgmeier, J. A., Boneh, D. and Bejerano, G. &quot;Deriving genomic diagnoses without revealing patient genomes,&quot; Science, vol. 357, no. 6352, pp. 692-695, Aug. 2017, doi: 10.1126/science.aam9710.</note>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Exposed! A Survey of Attacks on Private Data</title>
+		<author>
+			<persName><forename type="first">Cynthia</forename><surname>Dwork</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Adam</forename><surname>Smith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Thomas</forename><surname>Steinke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Jonathan</forename><surname>Ullman</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-statistics-060116-054123</idno>
+		<ptr type="open-access" target="http://pdfs.semanticscholar.org/2396/349f2609518a147ce592c9360f595e6b3911.pdf" />
+	</analytic>
+	<monogr>
+		<title level="j">Annual Review of Statistics and Its Application</title>
+		<title level="j" type="abbrev">Annu. Rev. Stat. Appl.</title>
+		<idno type="ISSN">2326-8298</idno>
+		<idno type="ISSNe">2326-831X</idno>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="61" to="84" />
+			<date type="published" when="2017-03-07" />
+			<publisher>Annual Reviews</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Dwork, C., Smith, A., Steinke, T. and Ullman, J. &quot;Exposed! A Survey of Attacks on Private Data,&quot; Annu. Rev. Stat. Its Appl., vol. 4, no. 1, pp. 61-84, Mar. 2017, doi: 10.1146/annurev-statistics- 060116-054123.</note>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Stochastic gradient descent with differentially private updates</title>
+		<author>
+			<persName><forename type="first">Shuang</forename><surname>Song</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Kamalika</forename><surname>Chaudhuri</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Anand</forename><forename type="middle">D</forename><surname>Sarwate</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/globalsip.2013.6736861</idno>
+		<ptr type="open-access" target="http://www.ece.rutgers.edu/%7Easarwate/pdfs/SongCS13sgd.pdf" />
+	</analytic>
+	<monogr>
+		<title level="m">2013 IEEE Global Conference on Signal and Information Processing</title>
+				<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2013-12" />
+			<biblScope unit="page" from="245" to="248" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Song, S., Chaudhuri, K. and Sarwate, A. D. &quot;Stochastic gradient descent with differentially private updates,&quot; in 2013 IEEE Global Conference on Signal and Information Processing, 2013, pp. 245- 248, doi: 10.1109/GlobalSIP.2013.6736861.</note>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<monogr>
+		<title level="m" type="main">Minimality Attack in Privacy Preserving Data Publishing</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">C</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">.-W</forename><surname>Fu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">W</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">.-C</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Pei</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename></persName>
+		</author>
+		<imprint>
+			<biblScope unit="page">12</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wong, R. C.-W., Fu, A. W.-C., Wang, K. and Pei, J. &quot;Minimality Attack in Privacy Preserving Data Publishing,&quot; p. 12.</note>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A Systematic Review of Re-Identification Attacks on Health Data</title>
+		<author>
+			<persName><forename type="first">Khaled</forename><surname>El Emam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Elizabeth</forename><surname>Jonker</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Luk</forename><surname>Arbuckle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bradley</forename><surname>Malin</surname></persName>
+		</author>
+		<idno type="DOI">10.1371/journal.pone.0028071</idno>
+		<idno type="PMID">22164229</idno>
+		<idno type="PMCID">PMC3229505</idno>
+		<ptr type="open-access" target="https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0028071&amp;type=printable" />
+	</analytic>
+	<monogr>
+		<title level="j">PLoS ONE</title>
+		<title level="j" type="abbrev">PLoS ONE</title>
+		<idno type="ISSNe">1932-6203</idno>
+		<imprint>
+			<biblScope unit="volume">6</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page">e28071</biblScope>
+			<date type="published" when="2011-12-02" />
+			<publisher>Public Library of Science (PLoS)</publisher>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">El Emam, K., Jonker, E., Arbuckle, L. and Malin, B. &quot;A Systematic Review of Re-Identification Attacks on Health Data,&quot; PLoS ONE, vol. 6, no. 12, p. e28071, Dec. 2011, doi: 10.1371/journal.pone.0028071.</note>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Guidance Regarding Methods for De-identification of Protected Health Information in Accordance with the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule</title>
+		<ptr target="https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#safeharborguidance" />
+		<imprint/>
+	</monogr>
+	<note>last accessed on 19/06/2020</note>
+	<note type="raw_reference">`Guidance Regarding Methods for De-identification of Protected Health Information in Accordance with the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule,&apos; available at https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de- identification/index.html#safeharborguidance, last accessed on 19/06/2020.</note>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<analytic>
+		<title level="a" type="main">L -diversity: Privacy beyond k -anonymity</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Machanavajjhala</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Kifer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gehrke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Venkitasubramaniam</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1217299.1217302</idno>
+	</analytic>
+	<monogr>
+		<title level="j">ACM Trans. Knowl. Discov. Data</title>
+		<imprint>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">3</biblScope>
+			<date type="published" when="2007-03" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Machanavajjhala, A., Kifer, D., Gehrke, J. and Venkitasubramaniam, M. &quot;L -diversity: Privacy beyond k -anonymity,&quot; ACM Trans. Knowl. Discov. Data, vol. 1, no. 1, pp. 3-es, Mar. 2007, doi: 10.1145/1217299.1217302.</note>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Authorship Attribution of E-Mail: Comparing Classifiers Over a New Corpus for Evaluation</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Allison</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Guthrie</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">LREC</title>
+		<imprint>
+			<date type="published" when="2008" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Allison, B. and Guthrie, L. &quot;Authorship Attribution of E-Mail: Comparing Classifiers Over a New Corpus for Evaluation,&quot; LREC, 2008.</note>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Tri-Training for Authorship Attribution with Limited Training Data</title>
+		<author>
+			<persName><forename type="first">Tieyun</forename><surname>Qian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Bing</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Li</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Zhiyong</forename><surname>Peng</surname></persName>
+		</author>
+		<idno type="DOI">10.3115/v1/p14-2057</idno>
+		<ptr type="open-access" target="http://aclweb.org/anthology/P/P14/P14-2057.pdf" />
+		<ptr target="https://pan.webis.de/clef17/pan17-web/author-profiling.html" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)</title>
+				<meeting>the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)<address><addrLine>Baltimore, Maryland</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computational Linguistics</publisher>
+			<date type="published" when="2014" />
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="345" to="351" />
+		</imprint>
+	</monogr>
+	<note>last accessed on 19/06/2020</note>
+	<note type="raw_reference">Qian, T., Liu, B., Chen, L. and Peng, Z. &quot;Tri-Training for Authorship Attribution with Limited Training Data,&quot; in Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), Baltimore, Maryland, 2014, pp. 345-351, doi: 10.3115/v1/P14-2057. https://pan.webis.de/clef17/pan17-web/author-profiling.html, last accessed on 19/06/2020.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

@@ -64,9 +64,9 @@ h1 {
 	background-color: #e97b01;
 }
 .display {
-	background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 0.9);
 }
-  
+
 </style>
 
 
@@ -103,15 +103,23 @@ h1 {
 						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="word_count" value="{{Word_Count}}" readonly>
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">PLAG CHECK REPORT</label>
-						<label class="form-control col-sm-3" style="margin-top:1%;">Status : Not Generated{{status}}</label>
-						<input type="submit" name="button" class="col-sm-2 btn btn-outline-secondary mt-1" style="margin-top:1%;margin-right:12%" onclick="$('#img1').show();" value="Create">
+						<label class="form-control col-sm-3" style="margin-top:1%;">Status : {{Status}}</label>
+						<input type="submit" name="button" class="col-sm-2 btn btn-outline-secondary {% if not Status == "Not Generated" %}disable{% endif %} mt-1" style="margin-top:1%;margin-right:12%" onclick="return confirm('Are you sure you want to continue?');$('#img1').show();" value="Create">
 						<label style="width:30%;margin-top:0.5%;margin-left:15%"></label>
-						<a class="form-control disable col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;" href="{{link}}" target="_blank">Link</a>
-						<a class="form-control disable col-sm-3 btn btn-outline-primary" style="margin-top:0.5%;margin-right:12%" href="{{link}}">Download</a>
+						<a class="form-control {% if not Status == "Generated" %}disable{% endif %} col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;" href="{{link}}" target="_blank">Link</a>
+						<a class="form-control {% if not Status == "Generated" %}disable{% endif %} col-sm-3 btn btn-outline-primary" style="margin-top:0.5%;margin-right:12%" href="report/download/{{Ref_ID}}">Download</a>
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">RIGHTS & PERMISSION LOGS</label>
 						<a class="form-control col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;" href="logs/{{Ref_ID}}" target="_blank">Open</a>
-						<a class="form-control disable col-sm-3 btn btn-outline-primary" style="margin-top:0.5%;margin-right:12%" href="{{link}}"></a>
+						<a class="form-control col-sm-3 btn btn-outline-primary" style="margin-top:0.5%;margin-right:12%" href="logs/download/{{Ref_ID}}">Download</a>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">SPELL CHECK REPORT</label>
+						<a class="form-control col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;" href="spell/{{Ref_ID}}" target="_blank">Open</a>
+						<a class="form-control col-sm-3 disable" style="margin-top:0.5%;margin-right:12%;" href="spell/download/{{Ref_ID}}"></a>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">LANGUAGE ANALYSIS</label>
+						<a class="form-control col-sm-2 btn btn-outline-primary" style="margin-top:0.5%;" href="language/{{Ref_ID}}" target="_blank">Open</a>
+						<a class="form-control col-sm-3 disable" style="margin-top:0.5%;margin-right:12%;" href="language/download/{{Ref_ID}}"></a>
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">EMAIL ID</label>
 						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="mail_id" value="{{Mail_ID}}" readonly>
@@ -160,9 +168,6 @@ h1 {
 						
 						<label style="width:30%;margin-top:1%;margin-left:15%">MESSAGE</label>
 						<textarea class="form-control col-sm-5" name="message" rows="4" style="resize:none;margin-top:1%;margin-right:12%;border-radius:5px;" readonly>{{Message}}</textarea>
-						
-						<input type="submit" style="" name="button"  class="btn btn-dark mt-2 mb-2"  onclick="$('#img1').show();" value="SUBMIT">
-						
 						
 
 					</div>
