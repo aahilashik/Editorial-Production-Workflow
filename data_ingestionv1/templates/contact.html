@@ -2,7 +2,7 @@
 <html>
     
 <head>
-	<title>Login</title>
+	<title>Contact Us</title>
 	<link rel = "icon" href = "https://ria.gallerycdn.vsassets.io/extensions/ria/nlp/0.2.11/1487192519683/Microsoft.VisualStudio.Services.Icons.Default" type = "image/x-icon">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -19,7 +19,7 @@
 			background: #ffffff !important;
 		}
 		.user_card {
-			width: 350px;
+			width: 700px;
 			margin-top: auto;
 			margin-bottom: auto;
 			background: #e97b01;
@@ -44,7 +44,7 @@
 		}
 
 		.login_btn {
-			width: 100%;
+			width: 150px;
 			background: #ffdd42  !important;
 			color: black !important;
 		}
@@ -110,17 +110,16 @@
 		<a href="/review">Assessment</a>
 	  {% endif %}
 	  <a href="/process/myfiles">My Submissions</a>
-	  
 	  <a href="/contact">Contact Us</a>
 	  <a href="/signup">Sign Up</a>
+	  
 	</div>
 	
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
 
-
-					<h2 id="form-title">LOGIN</h3>
+					<h2 id="form-title">CONTACT US</h3>
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form method="POST" action="">
@@ -130,32 +129,69 @@
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
 
-							<input type="text" name="username" placeholder="Username..." class="form-control">
+							<input type="text" name="firstname" placeholder="First Name..." class="form-control" required>
+							
+							
 						</div>
 
-						<div class="input-group mb-2">
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+
+							<input type="text" name="lastname" placeholder="Last Name..." class="form-control " required>
+						
+						</div>
+
+						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
 
-								<input type="password" name="password" placeholder="Password..." class="form-control" >
+								<input type="email" name="email" placeholder="Email..." class="form-control"  required>
+						</div>
+
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+							</div>
+
+								<input type="number" name="mobile" pattern="[0-9]{5-12}" placeholder="Mobile Number..." class="form-control"  required>
+						</div>
+
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+							</div>
+
+								<input type="number" name="refID" max=99999 min=10000 placeholder="Reference ID(optional)..." class="form-control"  >
+						</div>
+						
+						
+						<div class="input-group mb-2">
+								<textarea name="message" rows="6" style="resize:none;margin-top:1%;margin-right:0%;border-radius:5px;width:500px"  required placeholder="Message..." class="form-control"></textarea>
 						</div>
 
 							<div class="d-flex justify-content-center mt-3 login_container">
-				 				<input class="btn login_btn" type="submit" value="Login">
+				 				<input class="btn login_btn" type="submit" name="button" value="Submit">
 				   			</div>
 					</form>
 
 				</div>
 
-				{{form.errors}}		
-		
+				{{form.errors}}	
+
+
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						Don't have an account? <a href="{% url 'signup' %}" class="ml-2">Sign Up</a>
+						<h4 style="color:white">Contact : 
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;Mail   : contact@email.com
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;Mobile : +91 96284 12345
+						</h4>
 					</div>
 			
-				</div>
+				</div>				
+		
 			</div>
 		</div>
 	</div>

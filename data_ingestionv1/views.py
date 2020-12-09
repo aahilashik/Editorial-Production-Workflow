@@ -17,8 +17,9 @@ from googlesearch import search
     
 langTool = language_check.LanguageTool('en-US') 
 
+
 config = {
-    "apiKey" : "jhabscbhjabcbsabjc-V9h43UHQ9BTqBAqm2I",
+    "apiKey" : "ivuglihbluhuhgiukn-V9h43UHQ9BTqBAqm2I",
     "authDomain" : "data-ingestion-aa201.firebaseapp.com",
     "databaseURL" : "https://data-ingestion-aa201.firebaseio.com",
     "projectId" : "data-ingestion-aa201",
@@ -30,8 +31,9 @@ config = {
 }
 
 #Email Credentials
-email_address   = "email@gmail.com"
-email_password  = "98789679612"
+email_address   = "name@mail.com"
+email_password  = "password"
+contact_address = "contact@email.com"
 
 UPLOAD_LOCATION = "./upload/"
 DOWNLOAD_LOCATION = "./download/"
@@ -303,6 +305,13 @@ def homepage(request):
     return render(request, 'home.html')
 
 def filesDelete(request, id, file):
+    
+    if not request.user.is_authenticated:
+        print("Trying to open without Signning In")
+        request.session["bar"] = "Please Login In and Try Again"
+        return redirect('/login')
+
+        
     cloudFiles = [filename.name for filename in storage.list_files()]
     for filename in cloudFiles:
         if str(id) in filename and str(file) in filename:
@@ -310,6 +319,13 @@ def filesDelete(request, id, file):
     return redirect("/process/myfiles")
     
 def filesDownload(request, id, file):
+
+    if not request.user.is_authenticated:
+        print("Trying to open without Signning In")
+        request.session["bar"] = "Please Login In and Try Again"
+        return redirect('/login')
+
+        
     cloudFiles = [filename.name for filename in storage.list_files()]
     for filename in cloudFiles:
         if str(id) in filename and str(file) in filename:
@@ -360,9 +376,34 @@ def filesUpload(request):
                 os.unlink(os.path.join("cache", file.name))
     return redirect("/process/myfiles")
 
+def contact(request):
+    if request.method == "POST":
+        print(request.POST)
+        if request.POST.get("button") == "Submit":
+            email = request.POST["email"]
+            fname = request.POST["firstname"]
+            lname = request.POST["lastname"]
+            phone = request.POST["mobile"]
+            msg   = request.POST["message"]
+            refID = ""
+            if "refID" in request.POST.keys():
+                refID = request.POST["refID"]
+                
+            if mailService.start():
+                print("Automated Reply for your request", "Amnet Systems\nReference ID\t:\t{} \nName\t:\t{}  \nEmail\t:\t{} \nMobile\t:\t{} \nMessage\t:\t{} \nYour request has been submitted successfully".format(refID, fname + " " + lname, email, phone, msg))
+                mailService.send(email, "Automated Reply for your request", "Amnet Systems\nReference ID\t:\t{} \nName\t:\t{}  \nEmail\t:\t{} \nMobile\t:\t{} \nMessage\t:\t{} \nYour request has been submitted successfully".format(refID, fname + " " + lname, email, phone, msg))
+                
+                print("Automated forward mail to contact mail id", "Amnet Systems\nReference ID\t:\t{} \nName\t:\t{}  \nEmail\t:\t{} \nMobile\t:\t{} \nMessage\t:\t{} \nThis mail forward by automated mail system from the Web Portal".format(refID, fname + " " + lname, email, phone, msg))
+                mailService.send(contact_address, "Automated forward mail from the Web Portal", "Amnet Systems\nReference ID\t:\t{} \nName\t:\t{}  \nEmail\t:\t{} \nMobile\t:\t{} \nMessage\t:\t{} \nThis mail forward by automated mail system from the Web Portal".format(refID, fname + " " + lname, email, phone, msg))
+    
+    return render(request, 'contact.html')
 
 def submissions(request):
     
+    if not request.user.is_authenticated:
+        print("Trying to open without Signning In")
+        request.session["bar"] = "Please Login In and Try Again"
+        return redirect('/login')
     if request.method == "POST":
         if request.POST.get("button") == "UPLOAD":
             filesUpload(request)
@@ -370,7 +411,7 @@ def submissions(request):
     if not request.user.is_authenticated:
         print("Trying to open without Signning In")
         request.session["bar"] = "Please Login In and Try Again"
-        return redirect('/0')
+        return redirect('/login')
 
     username = request.user.username
     try:
@@ -417,7 +458,7 @@ def index(request):
     if not request.user.is_authenticated:
         print("Trying to open without Signning In")
         request.session["bar"] = "Please Login In and Try Again"
-        return redirect('/0')
+        return redirect('/login')
         
     global unique_id
     logs = []
@@ -429,7 +470,7 @@ def index(request):
             
             print("Username : {} | Started to Process".format(request.user.username))
             
-            unique_id = "81948" # str(random.randint(10000,99999))#"unique_id"
+            unique_id = "81948" # str(random.randint(10000,99999))#"unique_id" # 
             if database.child("ingested data").get().val():
                 while unique_id in database.child("ingested data").get().val().keys():
                     unique_id = str(random.randint(10000,99999))#"unique_id"
@@ -585,7 +626,7 @@ def index(request):
                     path_on_cloud = CLOUD_LOCATION
                     path_on_local = os.path.join(UPLOAD_LOCATION, refID, folder, file)
                     storage.child(path_on_cloud).child(refID).child(folder).child(file).put(path_on_local)
-                    #os.unlink(path_on_local)
+                    os.unlink(path_on_local)
                     
             database.child(CLOUD_LOCATION).child(refID).set(dbValues)
             if mailService.start():

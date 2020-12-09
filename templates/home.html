@@ -29,8 +29,11 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
                     <li><a href="/process/gather">Ingestion</a></li>
-                    <li><a href="/review">Assessment</a></li>
+                    {% if user.groups.all.0.name == "Amnet Peoples" %}
+						<li><a href="/review">Assessment</a></li>
+					{% endif %}
 					<li><a href="/process/myfiles">My Submissions</a></li>
+					<li><a href="/contact">Contact Us</a></li>
 		  
                 </ul>
                 {% if user.is_authenticated %}

@@ -98,7 +98,11 @@
 		<div class="topnav" style="width:70%;margin-left:15%">
 		  <a class="" href="/">Home</a>
 		  <a href="/process/gather">Ingestion</a>
-		  <a href="/review">Assessment</a>
+		  {% if user.groups.all.0.name == "Amnet Peoples" %}
+			<a href="/review">Assessment</a>
+		  {% endif %}
+		  <a href="/process/myfiles">My Submissions</a>
+		  <a href="/contact">Contact Us</a>
 		  <a href="/login">Log In</a>
 		</div>
 	

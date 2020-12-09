@@ -11,11 +11,12 @@ from copyleaks import CopyLeaks
 import time
 
 
-cLusername    = "email@copyleaks.com"
-cLapiKey      = "00000000000000000000000000000000"
+
+cLusername    = "email@mail.com"
+cLapiKey      = "ughgigiubhiuhihu-ad16-ca684ff7af09"
 
 config = {
-    "apiKey" : "AIzaSyC7fww5ra5nUCPh-V9h43UHQ9BTqBAqm2I",
+    "apiKey" : "jgvljghjbjb-V9h43UHQ9BTqBAqm2I",
     "authDomain" : "data-ingestion-aa201.firebaseapp.com",
     "databaseURL" : "https://data-ingestion-aa201.firebaseio.com",
     "projectId" : "data-ingestion-aa201",
@@ -50,7 +51,7 @@ def google_search(query):
 
 def downloadPlag(request, refID):  
     if not request.user.is_authenticated:
-        return redirect('/')  
+        return redirect('/login')
     file_path = os.path.join("cache", str(refID)+"_report.pdf")
     storage.child("ingested data").child(refID).child("others").child(str(refID)+"_report.pdf").download(file_path)
     if os.path.exists(file_path):
@@ -63,7 +64,7 @@ def downloadPlag(request, refID):
     
 def downloadRnP(request, refID): 
     if not request.user.is_authenticated:
-        return redirect('/')   
+        return redirect('/login')
     file_path = os.path.join("cache", str(refID)+"_RnPlogs.xlsx")
     storage.child("ingested data").child(refID).child("others").child(str(refID)+"_RnPlogs.xlsx").download(file_path)
     if os.path.exists(file_path):
@@ -76,7 +77,7 @@ def downloadRnP(request, refID):
 
 def downloadSpl(request, refID): 
     if not request.user.is_authenticated:
-        return redirect('/')   
+        return redirect('/login')
     file_path = os.path.join("cache", str(refID)+"_Spell_logs.xlsx")
     storage.child("ingested data").child(refID).child("others").child(str(refID)+"_Spell_logs.xlsx").download(file_path)
     if os.path.exists(file_path):
@@ -100,7 +101,7 @@ def downloadLang(request, refID):
 
 def spellLogs(request, refID): 
     if not request.user.is_authenticated:
-        return redirect('/')
+        return redirect('/login')
     global data
     
     fileUrl     = storage.child("ingested data").child("{}".format(refID)).child("others").child("{}_Spell_logs.xlsx".format(refID)).get_url(None)
@@ -145,7 +146,7 @@ def spellLogs(request, refID):
     
 def grammLogs(request, refID): 
     if not request.user.is_authenticated:
-        return redirect('/')
+        return redirect('/login')
     global data
     
     fileUrl = storage.child("ingested data").child("{}".format(refID)).child("others").child("{}_Grammar_logs.xlsx".format(refID)).get_url(None)
@@ -165,7 +166,7 @@ def grammLogs(request, refID):
     
 def logs(request, refID): 
     if not request.user.is_authenticated:
-        return redirect('/')
+        return redirect('/login')
     global data
     
     """
@@ -204,7 +205,7 @@ def review(request):
 
     if not request.user.is_authenticated:
         request.session["bar"] = "Please Login In and Try Again"
-        return redirect('/0')
+        return redirect('/login')
         
     try:
         if not request.user.groups.all()[0].name == "Amnet Peoples":
@@ -265,6 +266,10 @@ def review(request):
             print("\n\n", refID, " : ", click, "\n\n")
         
             if click == "Delete":
+                cloudFiles = [file.name for file in storage.list_files()]
+                for file in cloudFiles:
+                    if "ingested data/{}".format(refID) in file:
+                        storage.delete(file)
                 database.child("ingested data").child(refID).remove()
             elif click == "Open":
                 cloudFiles = [file.name for file in storage.list_files()]

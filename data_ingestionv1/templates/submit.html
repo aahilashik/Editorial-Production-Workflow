@@ -81,8 +81,11 @@ ul, #myUL {
 		<div class="topnav">
 		  <a class="" href="/">Home</a>
 		  <a href="/process/gather">Ingestion</a>
-		  <a href="/review">Assessment</a>
+		  {% if user.groups.all.0.name == "Amnet Peoples" %}
+			<a href="/review">Assessment</a>
+		  {% endif %}
 		  <a href="/process/myfiles">My Submissions</a>
+		  <a href="/contact">Contact Us</a>
 		</div>
 	<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
@@ -95,7 +98,8 @@ ul, #myUL {
 		  <div class="w3-white w3-text-grey w3-card-4">
 			
 			<div class="w3-container">
-			  <p><i class="fa  fa-fw w3-large w3-text-black"></i>{{user.first_name}} {{user.last_name}}</p>
+			  <br>
+			  <h3><i class="fa  fa-fw w3-large w3-text-black"></i>{{user.first_name}} {{user.last_name}}</h3>
 			  <br>
 			  <p><i class="mt-2 fa fa-user fa-fw w3-margin-right w3-large w3-text-black"></i>{{user.username}}</p>
 			  <br>
@@ -121,12 +125,15 @@ ul, #myUL {
 				<br>
 					{% csrf_token %}
 					
+					<!-- 
 					<label class="mt-1"  style="width:30%;margin-left:5%">Manuscript</label>
 					<input class="btn btn-dark ml-1 mr-3" type="file" name="files" autocomplete="off">
 					<br><br>
 					<label class="mt-1" style="width:30%;margin-left:5%">Images</label>
 					<input class="btn btn-dark ml-1 mr-3" type="file" name="images" multiple autocomplete="off">
 					<br><br>
+					 -->
+					
 					<label class="mt-1" style="width:30%;margin-left:5%">Others</label>
 					<input class="btn btn-dark ml-1 mr-3" type="file" name="others" multiple autocomplete="off">
 					<br><br>
@@ -162,7 +169,9 @@ ul, #myUL {
 								<li class="mt-3">
 									<h5>{{v}}
 										<a class="btn btn-outline-primary mt-2" style="margin-left:1%;" href="download/{{key}}/{{v}}" value="Download">Download</a>
-										<a class="btn btn-outline-danger mt-2" style="margin-left:0.25%;" href="delete/{{key}}/{{v}}" value="Remove">Remove</a>
+										{% if key1 == "others" %}
+											<a class="btn btn-outline-danger mt-2" style="margin-left:0.25%;" href="delete/{{key}}/{{v}}" value="Remove">Remove</a>
+										{% endif %}
 									</h5>
 								</li>
 							{% endfor %}

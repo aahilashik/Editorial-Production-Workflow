@@ -110,11 +110,17 @@ h1 {
 	<div class="topnav" style="width:70%;margin-left:15%">
 		  <a class="" href="/">Home</a>
 		  <a href="/process/gather">Ingestion</a>
-		  <a href="/review">Assessment</a>
+		  {% if user.groups.all.0.name == "Amnet Peoples" %}
+			<a href="/review">Assessment</a>
+		  {% endif %}
 		  <a href="/process/myfiles">My Submissions</a>
-		  <a href="/login">Sign Up</a>
-		</div>
-		<br>
+		  <a href="/contact">Contact Us</a>
+		<form id="logoutForm" action="/logout" method="post" class="navbar-right">
+			{% csrf_token %}
+			<a href="/logout">Logout</a>
+		</form>
+	</div>
+	<br>
 	<div class="container specific main" style="font-family:candara; font-weight:bold; color:#1f4068; border-radius: 25px;">
 	
 		
