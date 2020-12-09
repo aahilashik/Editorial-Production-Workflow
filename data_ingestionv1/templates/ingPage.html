@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Home - Dashboard</title>
+
+	<link rel = "icon" href = "https://ria.gallerycdn.vsassets.io/extensions/ria/nlp/0.2.11/1487192519683/Microsoft.VisualStudio.Services.Icons.Default" type = "image/x-icon">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var maxField = 5;
+		var addButton = $('.add_button'); 
+		var wrapper = $('.field_wrapper');
+		var fieldHTML = '<div class="row" ><label style="width:30%;margin-top:1%;margin-left:15%"></label><input class="form-control col-sm-5" style="margin-top:1%;margin-right:1%" type="text" name="authors" required><a style="width:3%;margin-top:1%;margin-right:8%;color:#ff2277;" href="javascript:void(0);" class="remove_button">x</a></div>';
+		var x = 1;
+
+		$(addButton).click(function(){
+		if(x < maxField){
+			x++;
+			$(wrapper).append(fieldHTML);
+		}
+		});
+
+		$(wrapper).on('click', '.remove_button', function(e){
+		e.preventDefault();
+		$(this).parent('div').remove();
+		x--;
+		});
+	});
+	</script>
+</head>
+
+
+<style>
+
+body {
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+h1 {
+  text-align: center;
+  color:#1f4068;
+  font-weight:bold;
+}
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('../static/load1.gif')
+              50% 50% no-repeat rgba(255, 255, 255, 0.6);
+}
+.specific {
+	background-color: #e97b01;
+}
+.display {
+	background-color: rgba(255, 255, 255, 0.9);
+}
+		
+		.topnav {
+		  overflow: hidden;
+		  background-color: #333;
+		  position:fixed;
+		}
+
+		.topnav a {
+		  float: left;
+		  color: #f2f2f2;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.topnav a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		.topnav a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+		
+		/* Main content */
+		.main {
+		  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+		
+</style>
+
+
+<body>
+	<div class="loader" id="img" style="display:none;"></div>
+	
+	<div class="topnav" style="width:70%;margin-left:15%">
+		  <a class="" href="/">Home</a>
+		  <a href="/process/gather">Ingestion</a>
+		  <a href="/review">Assessment</a>
+		  <a href="/process/myfiles">My Submissions</a>
+		  <a href="/login">Sign Up</a>
+		</div>
+		<br>
+	<div class="container specific main" style="font-family:candara; font-weight:bold; color:#1f4068; border-radius: 25px;">
+	
+		
+		<br>
+
+		<div class="container display" style="border-radius: 12px;">
+			<br>
+			<h1>DATA INGESTION</h1> 
+			<br> 
+		</div>
+
+		<br>
+		
+		<form method="post"  enctype="multipart/form-data">
+			
+			<div class="display" style="font-size: 20px;border-radius: 12px;">
+				<br>
+					{% csrf_token %}
+					<textarea class="form-control" rows="3" readonly style="width:90%;resize:none;margin-left:4%;border-radius:10px;background-color:{{alert}};">{{logs}}</textarea>
+					<br>
+					<label style="width:30%;margin-left:5%">Manuscript</label>
+					<input class="btn btn-dark ml-1" type="file" name="files" autocomplete="off" required>
+					<br><br>
+					<label style="width:30%;margin-left:5%">Images</label>
+					<input class="btn btn-dark ml-1" type="file" name="images" multiple autocomplete="off">
+					<br><br>
+					<label style="width:30%;margin-left:5%">Others</label>
+					<input class="btn btn-dark ml-1" type="file" name="others" multiple autocomplete="off">
+					<br><br>
+					<div class="row" style="justify-content:center;align-items:center;">
+						<input type="submit" name="button" class="btn btn-dark mt-1" onclick="$('#img').show();" value="UPLOAD & POPULATE">	
+					</div>
+				<br>
+			</div>	
+		
+		
+		
+		
+		</form>
+		<form method="post">
+		
+		
+			
+			<br>
+			
+			<div class=" display" style="border-radius: 12px;">
+				<br>
+					{% csrf_token %}
+					<div class="form-group row" style="font-size: 20px;justify-content: center;width:100%;">			
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">EMAIL ID</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="email" name="mail_id" value="{{Mail_ID}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">DOI</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="doi" value="{{DOI}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">ARTICLE TITLE</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="article_title" value="{{Article_Title}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">ARTICLE TYPE</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="article_type" value="{{Article_Type}}" required>
+					
+						<label style="width:30%;margin-top:1%;margin-left:15%">PUBLISHED DATE</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="published_date" value="{{Published_Date}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">AUTHOR(s)</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:1%" type="text" name="authors" value="{{Authors.0}}" required>
+						<a href="javascript:void(0);" class="add_button" style="width:3%;margin-top:1%;margin-right:8%" title="Add field">+</a>
+						<div class="field_wrapper" style="width:100%;">
+							{% for author in Authors|slice:"1:" %}
+								<div class="row" >
+									<label style="width:30%;margin-top:1%;margin-left:15%" > </label>
+									<input class="form-control col-sm-5" style="margin-top:1%;margin-right:1%" type="text" name="authors" value="{{author}}" required>
+									<a style="margin-top:1%;margin-right:8%;color:#ff2277;" href="javascript:void(0);" class="remove_button">x</a>
+								</div>
+							{% endfor %}
+						</div>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">NUMBER OF FIGURES</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="no_of_figures" value="{{No_of_Figures}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">NUMBER OF TABLES</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="no_of_tables" value="{{No_of_Tables}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">ABSTRACT</label>
+						<textarea class="form-control col-sm-5" name="abstract" rows="4" style="resize:none;margin-top:1%;margin-right:12%;border-radius:5px;" >{{Abstract}}</textarea>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">SPECIAL INSTRUCTIONS</label>
+						<input class="form-control col-sm-5" style="margin-top:1%;margin-right:12%" type="text" name="spl_instruct" value="{{Special_Instructions}}" required>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">CONFLICT OF INTEREST</label>
+						<div class="col-sm-5" style="margin-top:1%;margin-right:12%;">
+							<input style="margin-top:1%" type="radio" name="c_Interest" value="Present" {% if Conflict_of_Interest %}checked{% endif %}><label  style="margin-left:2%"for="Present" >Present</label>
+							<input style="margin-top:1%;margin-left:5%" type="radio" name="c_Interest" value="Absent" {% if not Conflict_of_Interest %}checked{% endif %}><label style="margin-left:2%" for="Absent" >Absent</label>
+						</div>
+
+						<label style="width:30%;margin-top:1%;margin-left:15%">FUNDING DETAILS</label>
+						<div class="col-sm-5" style="margin-top:1%;margin-right:12%;">
+							<input style="margin-top:1%" type="radio" name="funding" value="Present" {% if Funding %}checked{% endif %}><label style="margin-left:2%" for="Present" >Present</label>
+							<input style="margin-top:1%;margin-left:5%" type="radio" name="funding" value="Absent"  {% if not Funding %}checked{% endif %}> <label style="margin-left:2%" for="Absent">Absent </label>
+						</div>
+						
+						<label style="width:30%;margin-top:1%;margin-left:15%">MESSAGE (if any)</label>
+						<textarea class="form-control col-sm-5" name="message" rows="4" style="resize:none;margin-top:1%;margin-right:12%;border-radius:5px;" ></textarea>
+						
+						<input type="hidden" name="word_count" value={{Word_Count}}>
+						<input type="hidden" name="unique_id" value={{Ref_ID}}>
+						<textarea name="content_text" style="display:none;">{{Content_Text}}</textarea>
+						<!-- <input type="hidden" name="content_text" value={{Content_Text}}> -->
+						
+						<input type="submit" style="" name="button"  class="btn btn-dark mt-2 mb-2"  onsubmit="$('#img').show();" value="SUBMIT" {{disable}}>
+
+					</div>
+				<br>
+			</div>
+		</form>
+		
+		
+		<br>
+		<!-- 
+		<div class="display" style="vertical-align:middle;text-align:center;">
+			<br>
+			<form method="post">
+				{% csrf_token %}
+				<h4 class="mt-2" style="font-weight:bold;" >Preview</h4> 
+				<textarea class="form-control" rows="5" readonly style="width:75%;resize:none;margin-left:12%;margin-right:12%;">{{processed}}</textarea>
+				<input type="submit" name="button" class="btn btn-dark mt-2 mb-2" value="SUBMIT">
+				<input type="submit" name="button" class="btn btn-dark mt-2 mb-2" value="DOWNLOAD">
+			</form>
+			<br>
+		</div>
+		<br> -->
+	</div>
+	<br>
+
+</body>
+</html>

@@ -50,7 +50,35 @@ h1 {
 .display {
 	background-color: rgba(255, 255, 255, 0.9);
 }
-  
+  .topnav {
+		  overflow: hidden;
+		  background-color: #333;
+		  position:fixed;
+		}
+
+		.topnav a {
+		  float: left;
+		  color: #f2f2f2;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.topnav a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		.topnav a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+		
+		/* Main content */
+		.main {
+		  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
   
 </style>
 
@@ -58,10 +86,21 @@ h1 {
 <body>
 	<div class="loader" id="img" style="display:none;"></div>
 	
+	<div class="topnav" style="width:70%;margin-left:15%;z-index:1">
+		  <a class="" href="/">Home</a>
+		  <a href="/process/gather">Ingestion</a>
+		  <a href="/review">Assessment</a>
+		  <a href="/process/myfiles">My Submissions</a>
+		  <a href="/login">Sign Up</a>
+		</div>
 	<br>
 	
 	<div class="container specific" style="font-family:candara; font-weight:bold; color:#1f4068;border-radius:8px">
+		
+		<br>
+	<div class="container specific main" style="font-family:candara; font-weight:bold; color:#1f4068; border-radius: 25px;">
 	
+		
 		<br>
 
 		<div class="container display" style="border-radius:4px">

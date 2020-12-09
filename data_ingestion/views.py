@@ -73,7 +73,7 @@ def index(request):
             database.child(unique_id).set(dbValues)
             logs.append("Database : Updated Successfully")
             context = {'logs':"\n".join(logs)}
-            return render(request, '../templates/home.html', context)
+            return render(request, '../templates/ingHome.html', context)
 
                     
        
@@ -83,7 +83,7 @@ def index(request):
 
 
     context = {'logs': ""}
-    return render(request, '../templates/home.html', context)
+    return render(request, '../templates/ingHome.html', context)
     
 def page(request):
     return HttpResponse("You are in page 1")

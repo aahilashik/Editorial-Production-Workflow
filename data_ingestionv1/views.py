@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import os, pandas as pd
 import pyrebase, time
 import bs4
@@ -13,11 +13,12 @@ from itertools import chain, repeat, islice
 import language_check 
 import re
 import numpy as np
-
+from googlesearch import search 
+    
 langTool = language_check.LanguageTool('en-US') 
 
 config = {
-    "apiKey" : "AIzaSyC7fww5ra5nUCPh-V9h43UHQ9BTqBAqm2I",
+    "apiKey" : "jhabscbhjabcbsabjc-V9h43UHQ9BTqBAqm2I",
     "authDomain" : "data-ingestion-aa201.firebaseapp.com",
     "databaseURL" : "https://data-ingestion-aa201.firebaseio.com",
     "projectId" : "data-ingestion-aa201",
@@ -29,12 +30,12 @@ config = {
 }
 
 #Email Credentials
-email_address   = "@@@@@@@@@@@@@@gmail.com"
-email_password  = "################"
+email_address   = "email@gmail.com"
+email_password  = "98789679612"
 
 UPLOAD_LOCATION = "./upload/"
 DOWNLOAD_LOCATION = "./download/"
-ALLOWED_MS_FORMATS = ["docx", "pdf", "xml"]
+ALLOWED_MS_FORMATS = ["docx", "pdf"]
 ALLOWED_IM_FORMATS = ["tiff", "jpg", "jpeg", "png"]
 CLOUD_LOCATION  = "ingested data"
 
@@ -43,6 +44,7 @@ storage     = firebase.storage()
 database    = firebase.database()
 
 # Create your views here.
+
 
 def deleteUpNDownloads(unique_id):
     print("\rDeleting Uploaded Files", end="")
@@ -103,12 +105,8 @@ def get_text_from_docx(docx_path) :
     
 def google_search(query): 
     search_result = []
-    try: 
-        from googlesearch import search 
-        for j in search(query, tld="co.in", num=2, stop=2, pause=2): 
-            search_result.append(j)
-    except ImportError:  
-        print("No module named 'google' found") 
+    for j in search(query, tld="co.in", num=2, stop=2, pause=2): 
+        search_result.append(j)
     return search_result
     
 def createRnPlogs(text, refID):
@@ -119,7 +117,7 @@ def createRnPlogs(text, refID):
 
     chapters = ["Chapter 1"]
     sentences = []
-    print()
+    
     for chapter in chapters:
         for sent in x:
             if len(sent.split(" ")) > 10 :
@@ -201,7 +199,7 @@ def createIzYzLogs(df, refID):
         yze_uk_lst.append('')
     diff = len(yze_uk_lst) - len(yze_us_lst)
     
-    print("\n\n", diff, yze_uk_lst, yze_us_lst, "\n\n")
+    print("Yze Table : ", yze_uk_lst, yze_us_lst)
     
     if diff > 0 : 
         # wrong_US_words = list(pad(yze_us_lst, yze_uk_lst, ''))
@@ -222,7 +220,7 @@ def createIzYzLogs(df, refID):
         ize_uk_lst.append('')
     diff = len(ize_uk_lst) - len(ize_us_lst)
 
-    print("\n\n", diff, ize_uk_lst, ize_us_lst, "\n\n")
+    print("Ize Table : ", ize_uk_lst, ize_us_lst)
     
     if diff > 0 : 
         ize_df["US English"] = list(pad(ize_us_lst, ize_uk_lst, ''))
@@ -236,7 +234,7 @@ def createIzYzLogs(df, refID):
     
     resultDF = pd.concat([ize_df, yze_df], axis=1, join='inner')
     resultDF.to_excel(os.path.join("./upload/", str(refID), "others", str(refID)+"_Yzeize_logs.xlsx"))
-    print("\n\n", ize_df, resultDF, yze_df, "\n\n")
+    print("Concatenated DF : ", resultDF)
     ize_df.to_excel(os.path.join("./upload/", str(refID), "others", str(refID)+"_izeSpell_logs.xlsx"))
     yze_df.to_excel(os.path.join("./upload/", str(refID), "others", str(refID)+"_yzeSpell_logs.xlsx"))
 
@@ -269,7 +267,7 @@ def createCommaLogs(text, refID):
         else : 
             continue
     final_df = pd.DataFrame(data=lines, columns=['Context'])
-    print(final_df)
+    print("Dataframe : ", final_df)
     final_df.to_excel(os.path.join("./upload/", str(refID), "others", str(refID)+"_Comma_logs.xlsx"))
 
 
@@ -299,25 +297,144 @@ def createGrammarLogs(text, refID) :
     
     df.to_excel(os.path.join("./upload/", str(refID), "others", str(refID)+"_Grammar_logs.xlsx"))
 
+def homepage(request):
+    print("Redirecting to Homepage")
+    request.session["bar"] = ""
+    return render(request, 'home.html')
+
+def filesDelete(request, id, file):
+    cloudFiles = [filename.name for filename in storage.list_files()]
+    for filename in cloudFiles:
+        if str(id) in filename and str(file) in filename:
+            storage.delete(filename)
+    return redirect("/process/myfiles")
+    
+def filesDownload(request, id, file):
+    cloudFiles = [filename.name for filename in storage.list_files()]
+    for filename in cloudFiles:
+        if str(id) in filename and str(file) in filename:
+            file_path = os.path.join("cache/", str(file))
+            parts = filename.split("/")
+            storage.child(parts[0]).child(parts[1]).child(parts[2]).child(parts[3]).download(file_path)
+            if os.path.exists(file_path):
+                with open(file_path, 'rb') as fh:
+                    response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+                os.unlink(file_path)
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+                return response
+            raise Http404
+
+def filesUpload(request):
+    print("request : ", request.POST)
+    if (request.method == 'POST'):    
+        if request.POST.get("button") == "UPLOAD":
+            print("Uploading Files")
+            refID = request.POST["refID"]
+            for file in request.FILES.getlist("files"):
+                print("Uploading Manuscript")
+                if file.name.split(".")[-1] in ALLOWED_MS_FORMATS :
+                    with open(os.path.join("cache", file.name), 'wb+') as destination:
+                        for i, chunk in enumerate(file.chunks()):
+                            destination.write(chunk)
+                        destination.close()
+                    storage.child("ingested data").child(refID).child("manuscript").child(file.name).put(os.path.join("cache", file.name)) 
+                    os.unlink(os.path.join("cache", file.name))
+
+            for file in request.FILES.getlist("images"):
+                print("Uploading Images")
+                if file.name.split(".")[-1] in ALLOWED_IM_FORMATS :
+                    with open(os.path.join("cache", file.name), 'wb+') as destination:
+                        for i, chunk in enumerate(file.chunks()):
+                            destination.write(chunk)
+                        destination.close()
+                    storage.child("ingested data").child(refID).child("images").child(file.name).put(os.path.join("cache", file.name)) 
+                    os.unlink(os.path.join("cache", file.name))
+
+            for file in request.FILES.getlist("others"):
+                print("Uploading Other files")
+                with open(os.path.join("cache", file.name), 'wb+') as destination:
+                    for i, chunk in enumerate(file.chunks()):
+                        destination.write(chunk)
+                    destination.close()
+                storage.child("ingested data").child(refID).child("others").child(file.name).put(os.path.join("cache", file.name)) 
+                os.unlink(os.path.join("cache", file.name))
+    return redirect("/process/myfiles")
+
+
+def submissions(request):
+    
+    if request.method == "POST":
+        if request.POST.get("button") == "UPLOAD":
+            filesUpload(request)
+    
+    if not request.user.is_authenticated:
+        print("Trying to open without Signning In")
+        request.session["bar"] = "Please Login In and Try Again"
+        return redirect('/0')
+
+    username = request.user.username
+    try:
+        data = database.child("ingested data").get().val()
+        print("Fetching the Data from the Database")
+        IDList = [a for a in data.keys() if data[a]["username"] == username]
+    except:
+        data = {}
+        IDList = []
+    tree = {}
+    if len(IDList)>0:
+        cloudFiles = [file.name for file in storage.list_files()]
+        for ID in IDList:
+            tree[ID] = {}
+            tree[ID]["manuscript"] = []
+            tree[ID]["images"] = []
+            tree[ID]["others"] = []
+            for file in cloudFiles:
+                if "ingested data/"+str(ID) in file and not ("others/" in file and "logs.xlsx" in file) and not ("others/" in file and "_report.pdf" in file):
+                    parts = file.split("/")[2:]
+                    tree[ID][parts[0]].append(parts[1])
+   
+    
+    """
+    string = "<ul>"
+    for ID in tree:
+        string += "\t<li><span>{}</span>\n\t\t<ul>".format(ID)
+        for folder in tree[ID]:
+            string += "\t\t\t<li><span>{}</span>\n\t\t\t\t<ul>".format(folder)
+            for file in tree[ID][folder]:
+                string += "\t\t\t\t\t<li><span>{}</span>".format(file)
+            
+                
+            string += "\t\t\t\t</ul>\n\t\t\t<li>"
+        string += "\t\t</ul>\n\t<li>"
+       """
+    print("userIDs : ", IDList)
+    return render(request, 'submit.html', {"treeview":tree})
 
 unique_id = 0
 mailService = MAIL(email_address, email_password)
-def index(request):       
+def index(request):   
+
+    if not request.user.is_authenticated:
+        print("Trying to open without Signning In")
+        request.session["bar"] = "Please Login In and Try Again"
+        return redirect('/0')
+        
     global unique_id
     logs = []
-    
     if (request.method == 'POST'):
             
     
         if request.POST.get("button") == "UPLOAD & POPULATE":
             #deleteUpNDownloads(unique_id)
             
-            unique_id = str(random.randint(10000,99999))#"unique_id"
+            print("Username : {} | Started to Process".format(request.user.username))
+            
+            unique_id = "81948" # str(random.randint(10000,99999))#"unique_id"
             if database.child("ingested data").get().val():
                 while unique_id in database.child("ingested data").get().val().keys():
                     unique_id = str(random.randint(10000,99999))#"unique_id"
             
-            print("\n\n", "Reference ID : ", unique_id, "\n\n")
+            print("Reference ID : ", unique_id)
             
             ppValues = {}
             try:
@@ -331,13 +448,12 @@ def index(request):
                     os.mkdir(os.path.join(UPLOAD_LOCATION, unique_id, "others"))
             except: pass
             logs.append("Auto Populate Done")
+            
+            print("Uploading Files and Parse")
             for file in request.FILES.getlist("files"):
-                
-                print("\n\n", file.name, os.listdir(os.path.join(UPLOAD_LOCATION, "unique_id", "manuscript")), "\n\n" )
                 
                 if file.name.split(".")[-1] in ALLOWED_MS_FORMATS :
                     word_count, text = 0, ""
-                
                     logs.append("File  : {} - Successfully Uploaded".format(str(file.name)))
                     with open(os.path.join(UPLOAD_LOCATION, unique_id, "manuscript", file.name), 'wb+') as destination:
                         for i, chunk in enumerate(file.chunks()):
@@ -400,7 +516,7 @@ def index(request):
                         try:
                             doi = soup.find('idno', type='DOI').getText()
                         except: doi = ""
-                        mail = ""
+                        mail = request.user.email
                         c_interest = coI
                         funding = fund
                         
@@ -429,7 +545,7 @@ def index(request):
             
             context = {'logs':"\n".join(logs)}
             context.update(ppValues)
-            return render(request, '../templates/page.html', context)
+            return render(request, '../templates/ingPage.html', context)
             
             
         if request.POST.get("button") == "SUBMIT":
@@ -450,16 +566,18 @@ def index(request):
             wCount      = request.POST['word_count']
             message     = request.POST['message']
             # text        = request.POST['content_text']
+            username    = request.user.username
             
-            dbValues = {"mail id": mail, "message": message, "doi":doi, "word count":wCount,"article title": aTitle, "article type": aType, "published date": date, "authors": author, "no of figures": figures, "no of tables": tables, "abstract": abstract, "special instructions":instruct, "conflict of interest":cInterest, "funding information":funding}
-            print("\n\n", dbValues, "\n\n")
+            
+            dbValues = {"username": username, "mail id": mail, "message": message, "doi":doi, "word count":wCount,"article title": aTitle, "article type": aType, "published date": date, "authors": author, "no of figures": figures, "no of tables": tables, "abstract": abstract, "special instructions":instruct, "conflict of interest":cInterest, "funding information":funding}
+            print("Values to be saved in Database : ", dbValues)
             
             if not len(os.listdir(os.path.join(UPLOAD_LOCATION, refID, "images"))) == int(figures):
                 ppValues = {"Ref_ID": refID, "Mail_ID": mail, "Article_Title": aTitle, "Article_Type": aType, "Published_Date": date, "Authors": author, "No_of_Figures": "", "No_of_Tables": tables, "Abstract": abstract, "Special_Instructions": instruct, "DOI": doi, "Conflict_of_Interest": cInterest, "Funding": funding, "Word_Count": wCount}
                 context = {'logs':"Submission Error : Image count", "alert":"#ff8888"}
                 context.update(ppValues)
-                return render(request, '../templates/page.html', context)
-                # return render(request, '../templates/page.html', {"logs":"Submission Error : Image count", "alert":"#ff8888"})
+                return render(request, '../templates/ingPage.html', context)
+                # return render(request, '../templates/ingPage.html', {"logs":"Submission Error : Image count", "alert":"#ff8888"})
                 
             for folder in os.listdir(os.path.join(UPLOAD_LOCATION, refID)):
                 for file in os.listdir(os.path.join(UPLOAD_LOCATION, refID, folder)):
@@ -477,10 +595,10 @@ def index(request):
             context = {'logs':"\n".join(logs), "alert":"#99ff99"}
             
             
-            return render(request, '../templates/page.html', context)
+            return render(request, '../templates/ingPage.html', context)
             
             
     context = {'logs': "", "alert":"#D6EAF8", "Conflict_of_Interest": 0, "Funding": 0}
-    return render(request, '../templates/page.html', context)
+    return render(request, '../templates/ingPage.html', context)
     
     

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Home</title>
+
+	<link rel = "icon" href = "https://ria.gallerycdn.vsassets.io/extensions/ria/nlp/0.2.11/1487192519683/Microsoft.VisualStudio.Services.Icons.Default" type = "image/x-icon">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">Amnet-Systems</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/process/gather">Ingestion</a></li>
+                    <li><a href="/review">Assessment</a></li>
+					<li><a href="/process/myfiles">My Submissions</a></li>
+		  
+                </ul>
+                {% if user.is_authenticated %}
+					<form id="logoutForm" action="/logout" method="post" class="navbar-right">
+						{% csrf_token %}
+						<ul class="nav navbar-nav navbar-right">
+							<li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
+							<li><a href="logout">Log Out</a></li>
+						</ul>
+					</form>
+
+					{% else %}
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="{% url 'login' %}">Log in</a></li>
+					</ul>
+
+				{% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <h1>
+			{% if status == "home" %}
+				{{status}}
+			{% else %}
+				{{request.session.bar}}
+			{% endif %}
+		</h1>
+		{{status}}
+	<div class="jumbotron mt-4">
+		<h1>Welcome</h1>
+	</div>
+
+<!-- 	<div class="row">
+		<div class="col-md-4">
+			<h2>Getting started</h2>
+			<p>
+				Django gives you a powerful, patterns-based way to build dynamic websites that
+				enables a clean separation of concerns and gives you full control over markup
+				for enjoyable, agile development.
+			</p>
+			<p><a class="btn btn-default" href="http://www.djangobook.com/en/2.0/index.html">Learn more &raquo;</a></p>
+		</div>
+		<div class="col-md-4">
+			<h2>Get more libraries</h2>
+			<p>The Python Package Index is a repository of software for the Python programming language.</p>
+			<p><a class="btn btn-default" href="https://pypi.org/">Learn more &raquo;</a></p>
+		</div>
+		<div class="col-md-4">
+			<h2>Microsoft Azure</h2>
+			<p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+			<p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+		</div>
+	</div>
+ -->  
+    </div>
+    
+</body>
+</html>

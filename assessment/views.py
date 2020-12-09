@@ -11,8 +11,8 @@ from copyleaks import CopyLeaks
 import time
 
 
-cLusername    = "copyleaks-email-id"
-cLapiKey      = "000000000000000000000"
+cLusername    = "email@copyleaks.com"
+cLapiKey      = "00000000000000000000000000000000"
 
 config = {
     "apiKey" : "AIzaSyC7fww5ra5nUCPh-V9h43UHQ9BTqBAqm2I",
@@ -48,7 +48,9 @@ def google_search(query):
         search_result.append(j)
     return search_result
 
-def downloadPlag(request, refID):    
+def downloadPlag(request, refID):  
+    if not request.user.is_authenticated:
+        return redirect('/')  
     file_path = os.path.join("cache", str(refID)+"_report.pdf")
     storage.child("ingested data").child(refID).child("others").child(str(refID)+"_report.pdf").download(file_path)
     if os.path.exists(file_path):
@@ -59,34 +61,46 @@ def downloadPlag(request, refID):
         return response
     raise Http404
     
-def downloadRnP(request, refID):    
-    file_path = os.path.join("./upload/", str(refID), "others", str(refID)+"_RnPlogs.xlsx")
+def downloadRnP(request, refID): 
+    if not request.user.is_authenticated:
+        return redirect('/')   
+    file_path = os.path.join("cache", str(refID)+"_RnPlogs.xlsx")
+    storage.child("ingested data").child(refID).child("others").child(str(refID)+"_RnPlogs.xlsx").download(file_path)
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
-            return response
+        os.unlink(file_path)    
+        return response
     raise Http404
 
-def downloadSpl(request, refID):    
-    file_path = os.path.join("./upload/", str(refID), "others", str(refID)+"_Spell_logs.xlsx")
+def downloadSpl(request, refID): 
+    if not request.user.is_authenticated:
+        return redirect('/')   
+    file_path = os.path.join("cache", str(refID)+"_Spell_logs.xlsx")
+    storage.child("ingested data").child(refID).child("others").child(str(refID)+"_Spell_logs.xlsx").download(file_path)
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
-            return response
+        os.unlink(file_path)
+        return response
     raise Http404
     
 def downloadLang(request, refID):    
     file_path = os.path.join("./upload/", str(refID), "others", str(refID)+"_Grammar_logs.xlsx")
+    storage.child("ingested data").child(refID).child("others").child(str(refID)+"_Grammar_logs.xlsx").download(file_path)
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
-            return response
+        os.unlink(file_path)
+        return response
     raise Http404
 
 def spellLogs(request, refID): 
+    if not request.user.is_authenticated:
+        return redirect('/')
     global data
     
     fileUrl     = storage.child("ingested data").child("{}".format(refID)).child("others").child("{}_Spell_logs.xlsx".format(refID)).get_url(None)
@@ -130,6 +144,8 @@ def spellLogs(request, refID):
     return render(request, 'spellLogs.html', context) 
     
 def grammLogs(request, refID): 
+    if not request.user.is_authenticated:
+        return redirect('/')
     global data
     
     fileUrl = storage.child("ingested data").child("{}".format(refID)).child("others").child("{}_Grammar_logs.xlsx".format(refID)).get_url(None)
@@ -148,6 +164,8 @@ def grammLogs(request, refID):
     return render(request, 'grammLogs.html', context) 
     
 def logs(request, refID): 
+    if not request.user.is_authenticated:
+        return redirect('/')
     global data
     
     """
@@ -183,9 +201,23 @@ def logs(request, refID):
     return render(request, 'r&pLogs.html', context) 
 
 def review(request):
+
+    if not request.user.is_authenticated:
+        request.session["bar"] = "Please Login In and Try Again"
+        return redirect('/0')
+        
+    try:
+        if not request.user.groups.all()[0].name == "Amnet Peoples":
+            request.session["bar"] = "Restricted Page"
+            return redirect('/1')
+    except: 
+        request.session["bar"] = "Restricted Page"
+        return redirect('/1')
+    
+    
     global data
     
-    if (request.method == 'POST'):
+    if (request.method == 'POST') and data!={}:
         if request.POST.get("button") == "Create":
             refID = request.POST.get("unique_id")
             cloudFiles = [str(file.name) for file in storage.list_files()]
@@ -246,7 +278,8 @@ def review(request):
                     print("\n\n", report_path, status, "\n\n")
                     if status=="Generated":
                         storage.child("ingested data").child(refID).child("others").child(str(refID)+"_report.pdf").put("cache/temp_{}.pdf".format(refID))
-                        os.unlink("temp_{}.pdf".format(refID))
+                        os.unlink("cache/temp_{}.pdf".format(refID))
+                userID      = data[refID]["username"]
                 word_count  = data[refID]["word count"]
                 link        =  storage.child("ingested data").child(refID).child("others").child(str(refID)+"_report.pdf").get_url(None)
                 a_title     = data[refID]["article title"]
@@ -262,7 +295,7 @@ def review(request):
                 funding     = data[refID]["funding information"]
                 message     = data[refID]["message"]
 
-                ppValues = {"Status":status, "Message": message, "Word_Count":word_count, "link":link, "Mail_ID": mail, "Article_Title": a_title, "Article_Type": a_type, "Published_Date": date, "Authors": authors, "No_of_Figures": n_figures, "No_of_Tables": n_tables, "Abstract": abstract, "Special_Instructions": "none", "DOI": doi, "Conflict_of_Interest": c_interest, "Funding": funding}
+                ppValues = {"userID": userID, "Status":status, "Message": message, "Word_Count":word_count, "link":link, "Mail_ID": mail, "Article_Title": a_title, "Article_Type": a_type, "Published_Date": date, "Authors": authors, "No_of_Figures": n_figures, "No_of_Tables": n_tables, "Abstract": abstract, "Special_Instructions": "none", "DOI": doi, "Conflict_of_Interest": c_interest, "Funding": funding}
                         
                 context = {"Ref_ID": refID}
                 context.update(ppValues)
@@ -270,6 +303,7 @@ def review(request):
         
     try:
         data = database.child("ingested data").get().val()
+        print("Fetching the Data from the Database")
         dataList = [[i+1, ID, data[ID]["authors"][0], data[ID]["word count"]]for i, ID in enumerate(data.keys())]
     except:
         data = {}
